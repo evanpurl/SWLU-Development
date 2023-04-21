@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<language id="44">
+<page id="9609" title="Waremanager">
+ <t id="1">\033GNo\033X</t>
+ <t id="2">\033GYes\033X</t>
+ <t id="3">Remove Selected Wares</t>
+ <t id="4">Remove Wares</t>
+ <t id="5">Select which wares to remove</t>
+ <t id="6">\033RWare Manager:\033X There are no unused wares to remove</t>
+ <t id="7">Select ware to remove from the universe</t>
+ <t id="8">\033BWare Manager:\033X Ware "\033G%s\033X" has be removed</t>
+ <t id="9">\033BWare Manager:\033X Remove Selected Ware</t>
+ <t id="10">\033BWare Manager:\033X Remove unused wares</t>
+</page>
+
+</language>
+

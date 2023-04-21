@@ -1,0 +1,15 @@
+$Msg = sprintf: pageid=8385 textid=7, null, null, null, null, null
+write to player logbook $Msg
+send incoming message $Msg to player: display it=[FALSE]
+
+* Waits 10 seconds, and then sends the hall of fame message
+= wait 10000 ms
+$PlayerName = get player name
+$Msg2 = sprintf: pageid=8385 textid=7, null, null, null, null, null
+
+= [THIS]-> call script 'al.Revelation.Debug.Write' : Msg=$Msg
+
+
+return null
+
+

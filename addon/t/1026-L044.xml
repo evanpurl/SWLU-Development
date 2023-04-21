@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<language id="44">
+<page id="1" title="Messages" descr="">
+ <t id="1">[author][cyan]Purls[/cyan][/author]Attention, there have been reports of several high ranking officials from the Empire and Rebellion patrolling their territory. You have been gifted satelites in the relevant sectors.</t>
+</page>
+<page id="1026" title="Empire Bosses" descr="Bosses for the Empire">
+ <t id="1">Admiral Natasi Daala</t>
+ <t id="2">Grand Admiral Thrawn</t>
+ <t id="3">Admiral Ozzel</t>
+ <t id="4">Admiral Piett</t>
+ <t id="5">Grand Moff Tarkin</t>
+</page>
+<page id="1027" title="Rebel Bosses" descr="">
+ <t id="1">Han Solo</t>
+ <t id="2">Wedge Antilles</t>
+ <t id="3">Hera Syndulla</t>
+ <t id="4">Commander Sato</t>
+ <t id="5">Rebel Command</t>
+</page>
+<page id="1028" title="Republic Bosses" descr="">
+</page>
+<page id="1029" title="CIS Bosses" descr="">
+</page>
+<page id="1030" title="Old Republic Bosses" descr="">
+</page>
+<page id="1031" title="Jedi Bosses" descr="">
+</page>
+<page id="1032" title="Resistance Bosses" descr="">
+</page>
+<page id="1033" title="Remnant Bosses" descr="">
+</page>
+<page id="1034" title="Empire Dialogue" descr="">
+ <t id="1">[author][red]Rebel Command[/red][/author]Nice work capturing the former Admiral Daala's flagship, it's yours now. We have gotten reports of Admiral Ozzel lingering in Imperial space, you know what to do.</t>
+ <t id="2">[author][red]Rebel Command[/red][/author]Nice work taking down Admiral Daala, she had that coming. We have wired you %s credits for her bounty.\n\nWe have gotten reports of Admiral Ozzel lingering in Imperial space, you know what to do.</t>
+ <t id="3">265000000</t>
+ <t id="4">Unused, can't board Thrawn</t>
+ <t id="5">[author][red]Rebel Command[/red][/author]Nice work taking down Grand Admiral Thrawn, he's had that coming for far too long. We have wired you %s credits for his bounty.</t>
+ <t id="6">650000000</t>
+ <t id="7">[author][red]Rebel Command[/red][/author]Nice work capturing Admiral Ozzel's flagship, it's yours now.</t>
+ <t id="8">[author][red]Rebel Command[/red][/author]Nice work taking down Admiral Ozzel, he had that coming. We have wired you %s credits for his bounty.\n\nWe have gotten reports of Admiral Piett lingering in Imperial space, armed with a decent fleet and his Executor class Super Star Destroyer, if you are able to take him down, you will be handsomely rewarded.</t>
+ <t id="9">315000000</t>
+ <t id="10">[author][red]Rebel Command[/red][/author]Nice work capturing Admiral Piett's flagship, it's yours now.</t>
+ <t id="11">[author][red]Rebel Command[/red][/author]Nice work taking down Admiral Piett, he had that coming. We have wired you %s credits for his bounty.\n\nWe have gotten reports of Grand Admiral Tarkin lingering in Imperial space, armed with a large fleet and his ISD 1, if you are able to take him down, you will be handsomely rewarded.</t>
+ <t id="12">430000000</t>
+ <t id="13">[author][red]Rebel Command[/red][/author]Nice work capturing Grand Moff Tarkin's flagship, it's yours now.</t>
+ <t id="14">[author][red]Rebel Command[/red][/author]Nice work taking down Grand Moff Tarkin, he had that coming. We have wired you %s credits for his bounty.\n\nWe have gotten reports of Grand Admiral Thrawn lingering in Imperial space, armed with a huge fleet and his ISD 2, if you are able to take him down, you will be handsomely rewarded.</t>
+ <t id="15">560000000</t>
+ <t id="9999">[author][red]Rebel Command[/red][/author]Thank you %s, you have helped bring peace in this time of war. We will be sending you a special reward for your work for the Rebellion.</t>
+</page>
+<page id="1035" title="Rebel Dialogue" descr="">
+ <t id="1">Unused, can't board Han Solo</t>
+ <t id="2">[author][red]Imperial Security Bureau[/red][/author]Nice work taking down the Rebel known as Han Solo. We have wired you %s credits for his bounty.\n\nWe have gotten reports of the traitorous Wedge Antilles lingering in Rebel space, you know what to do.</t>
+ <t id="3">6250000</t>
+ <t id="4">Unused, can't board Wedge Antilles</t>
+ <t id="5">[author][red]Imperial Security Bureau[/red][/author]Nice work taking out Wedge Antilles, that traitor finally got what he deserved. We have wired you %s credits for his bounty.\n\nWe have gotten reports of the Rebel pilot Hera Syndulla lingering in Rebel space, you know what to do.</t>
+ <t id="6">9500000</t>
+ <t id="7">Unused, can't board Hera Syndulla</t>
+ <t id="8">[author][red]Imperial Security Bureau[/red][/author]Nice work taking out Hera Syndulla and her Spectres, they have bothered the Empire long enough. We have wired you %s credits for her bounty.\n\nWe have gotten reports of the Rebel leader Commander Sato lingering in Rebel space, you know what to do.</t>
+ <t id="9">15500000</t>
+ <t id="10">[author][red]Imperial Security Bureau[/red][/author]Nice work capturing Commander Sato's flagship, it's yours now.\n\nFinally, we have gotten reports of the Rebel Fleet lingering in Rebel space, you know what to do.</t>
+ <t id="11">[author][red]Imperial Security Bureau[/red][/author]Nice work taking out Commander Sato, finally the rebel is down another leader. We have wired you %s credits for his bounty.\n\nFinally, we have gotten reports of the Rebel fleet lingering in Rebel space, you know what to do.</t>
+ <t id="12">22600000</t>
+ <t id="13">Unused, can't board Rebel Command</t>
+ <t id="14">[author][red]Imperial Security Bureau[/red][/author]Nice work taking out Rebel Command, the Rebels won't be able to recover from this. We have wired you %s credits for their bounties.\n\nThank you, that is all.</t>
+ <t id="15">125000000</t>
+ <t id="9999">[author][red]Imperial Security Bureau[/red][/author]Thank you %s, you have helped stamp out these terrorists once and for all. We will be sending you a special reward for your work for the Empire.</t>
+</page>
+</language>

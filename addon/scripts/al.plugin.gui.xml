@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>al.plugin.gui</name>
+<version>100</version>
+<engineversion>42</engineversion>
+<description>Plugin Manager: Sets up the custom gui</description>
+<arguments>
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$page.id&#160;=&#160;</var><var>9005</var></line>
+<line linenr="002" indent=""><text>load&#160;text:&#160;id=</text><var>$page.id</var></line>
+<line linenr="003" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'gui.id'</var><text>&#160;value=</text><var>$page.id</var></line>
+<line linenr="004" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'gui.readid'</var><text>&#160;value=</text><var>9006</var></line>
+<line linenr="005" indent=""></line>
+<line linenr="006" indent=""><text>al&#160;engine:&#160;register&#160;script=</text><call>al.gui.main</call></line>
+<line linenr="007" indent=""></line>
+<line linenr="008" indent=""><var>$lang&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$page.id</var><text>&#160;id=</text><var>2</var></line>
+<line linenr="009" indent=""><text>write&#160;to&#160;log&#160;file&#160;#</text><var>9005</var><text>&#160;&#160;append=</text><var>[TRUE]</var><text>&#160;&#160;printf:&#160;fmt=</text><var>'LANGUAGE:%s'</var><text>,&#160;</text><var>$lang</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="010" indent=""><text>write&#160;to&#160;log&#160;file&#160;#</text><var>9005</var><text>&#160;&#160;append=</text><var>[TRUE]</var><text>&#160;&#160;printf:&#160;fmt=</text><var>'TEXTFILE:%s'</var><text>,&#160;</text><var>9006</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="011" indent=""></line>
+<line linenr="012" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+<sval type="array" size="10"><sval type="string" val="al.plugin.gui" /><sval type="int" val="42" /><sval type="string" val="Plugin Manager: Sets up the custom gui" /><sval type="int" val="100" /><sval type="int" val="0" /><sval type="array" size="2"><sval type="string" val="page.id" /><sval type="string" val="lang" /></sval><sval type="array" size="9"><sval type="array" size="7"><sval type="int" val="104" /><sval type="int" val="0" /><sval type="int" val="1" /><sval type="int" val="4" /><sval type="int" val="9005" /><sval type="int" val="1" /><sval type="int" val="-1" /></sval><sval type="array" size="3"><sval type="int" val="151" /><sval type="int" val="131074" /><sval type="int" val="0" /></sval><sval type="array" size="5"><sval type="int" val="157" /><sval type="int" val="5" /><sval type="string" val="gui.id" /><sval type="int" val="131074" /><sval type="int" val="0" /></sval><sval type="array" size="5"><sval type="int" val="157" /><sval type="int" val="5" /><sval type="string" val="gui.readid" /><sval type="int" val="4" /><sval type="int" val="9006" /></sval><sval type="array" size="2"><sval type="int" val="1000" /><sval type="string" val="al.gui.main" /></sval><sval type="array" size="6"><sval type="int" val="126" /><sval type="int" val="1" /><sval type="int" val="131074" /><sval type="int" val="0" /><sval type="int" val="4" /><sval type="int" val="2" /></sval><sval type="array" size="17"><sval type="int" val="405" /><sval type="int" val="4" /><sval type="int" val="9005" /><sval type="int" val="131075" /><sval type="int" val="10" /><sval type="int" val="5" /><sval type="string" val="LANGUAGE:%s" /><sval type="int" val="131074" /><sval type="int" val="1" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /></sval><sval type="array" size="17"><sval type="int" val="405" /><sval type="int" val="4" /><sval type="int" val="9005" /><sval type="int" val="131075" /><sval type="int" val="10" /><sval type="int" val="5" /><sval type="string" val="TEXTFILE:%s" /><sval type="int" val="4" /><sval type="int" val="9006" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /><sval type="int" val="0" /></sval><sval type="array" size="3"><sval type="int" val="103" /><sval type="int" val="0" /><sval type="int" val="0" /></sval></sval><sval type="int" val="0" /><sval type="array" size="3"><sval type="array" size="2"><sval type="int" val="4" /><sval type="int" val="2" /></sval><sval type="array" size="2"><sval type="int" val="5" /><sval type="int" val="2" /></sval><sval type="array" size="2"><sval type="int" val="8" /><sval type="int" val="2" /></sval></sval><sval type="int" val="0" /></sval>
+</codearray>
+</script>

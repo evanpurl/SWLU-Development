@@ -1,0 +1,72 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>al.plugin.gamedata</name>
+<version>1</version>
+<engineversion>42</engineversion>
+<description>Start AL Plugin for generating data for the plugin manager</description>
+<arguments>
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$page.id&#160;=&#160;</var><var>901</var></line>
+<line linenr="002" indent=""><text>load&#160;text:&#160;id=</text><var>$page.id</var></line>
+<line linenr="003" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'pluginmanager.id'</var><text>&#160;value=</text><var>$page.id</var></line>
+<line linenr="004" indent=""></line>
+<line linenr="005" indent=""><text>al&#160;engine:&#160;register&#160;script=</text><call>al.gamedata.main</call></line>
+<line linenr="006" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="al.plugin.gamedata"/>
+  <sval type="int" val="42"/>
+  <sval type="string" val="Start AL Plugin for generating data for the plugin manager"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="1">
+    <sval type="string" val="page.id"/>
+  </sval>
+  <sval type="array" size="5">
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="901"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="151"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="pluginmanager.id"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="1000"/>
+      <sval type="string" val="al.gamedata.main"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="array" size="1">
+    <sval type="array" size="2">
+      <sval type="int" val="3"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="string" val="al.plugin.logitechg19"/>
+</sval>
+
+</codearray>
+</script>

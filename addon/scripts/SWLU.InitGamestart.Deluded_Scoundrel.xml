@@ -1,0 +1,941 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>SWLU.InitGamestart.Deluded_Scoundrel</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments />
+	<sourcetext>
+		<line linenr="001" indent="" />
+		<line linenr="002" indent="">
+			<var>$plname</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>player</text>
+			<text> </text>
+			<text>name</text>
+		</line>
+		<line linenr="003" indent="" />
+		<line linenr="004" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$plname</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'Dscoundrel'</text>
+		</line>
+		<line linenr="005" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>player</text>
+			<text> </text>
+			<text>name</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text> </text>
+			<text>'Deluded Scoundrel'</text>
+		</line>
+		<line linenr="006" indent="&#160;">
+			<var>$plname</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>player</text>
+			<text> </text>
+			<text>name</text>
+		</line>
+		<line linenr="007" indent="&#160;">
+			<var>$smsg</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Initializing GameStart '</text>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>$plname</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>'...'</text>
+		</line>
+		<line linenr="008" indent="&#160;">
+			<text>display</text>
+			<text> </text>
+			<text>info</text>
+			<text> </text>
+			<text>box</text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text> </text>
+			<var>$smsg</var>
+			<text>,</text>
+			<text> </text>
+			<text>icon</text>
+			<text>=</text>
+			<text> </text>
+			<var>51</var>
+			<text>,</text>
+			<text> </text>
+			<text>timeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>750</var>
+			<text>,</text>
+			<text> </text>
+			<text>fadeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>1000</var>
+		</line>
+		<line linenr="009" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>100</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="010" indent="&#160;" />
+		<line linenr="011" indent="&#160;" />
+		<line linenr="012" indent="&#160;">
+			<comment>* Default ranks</comment>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>trade</text>
+			<text> </text>
+			<text>rank</text>
+			<text>=</text>
+			<text> </text>
+			<var>1000</var>
+		</line>
+		<line linenr="014" indent="&#160;" />
+		<line linenr="015" indent="&#160;">
+			<comment>* Spawns the three OWPs with treasure</comment>
+		</line>
+		<line linenr="016" indent="&#160;">
+			<var>$T1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Neutral Race Small Orbital Weapons Platform}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>[Far Point]</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>615</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>38900</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>44900</var>
+		</line>
+		<line linenr="017" indent="&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>$T1</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>4</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{2 GJ Shield}</var>
+		</line>
+		<line linenr="018" indent="&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>$T1</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>5</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Black Crystal}</var>
+		</line>
+		<line linenr="019" indent="&#160;">
+			<var>$MaxT1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$T1</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>maximum</text>
+			<text> </text>
+			<text>shield</text>
+			<text> </text>
+			<text>strength</text>
+		</line>
+		<line linenr="020" indent="&#160;">
+			<var>$T1</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>current</text>
+			<text> </text>
+			<text>shield</text>
+			<text> </text>
+			<text>strength</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>$MaxT1</var>
+		</line>
+		<line linenr="021" indent="&#160;" />
+		<line linenr="022" indent="&#160;">
+			<var>$T2</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Neutral Race Small Orbital Weapons Platform}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>[Three Worlds]</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>35900</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>-22600</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>27800</var>
+		</line>
+		<line linenr="023" indent="&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>$T2</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>4</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{2 GJ Shield}</var>
+		</line>
+		<line linenr="024" indent="&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>$T2</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>5</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Black Crystal}</var>
+		</line>
+		<line linenr="025" indent="&#160;">
+			<var>$MaxT2</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$T2</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>maximum</text>
+			<text> </text>
+			<text>shield</text>
+			<text> </text>
+			<text>strength</text>
+		</line>
+		<line linenr="026" indent="&#160;">
+			<var>$T2</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>current</text>
+			<text> </text>
+			<text>shield</text>
+			<text> </text>
+			<text>strength</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>$MaxT2</var>
+		</line>
+		<line linenr="027" indent="&#160;" />
+		<line linenr="028" indent="&#160;">
+			<var>$T3</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Neutral Race Small Orbital Weapons Platform}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>[Getsu Fune]</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>-54100</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>32300</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>-54600</var>
+		</line>
+		<line linenr="029" indent="&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>$T3</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>4</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{2 GJ Shield}</var>
+		</line>
+		<line linenr="030" indent="&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>$T3</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>5</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Black Crystal}</var>
+		</line>
+		<line linenr="031" indent="&#160;">
+			<var>$MaxT3</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$T3</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>maximum</text>
+			<text> </text>
+			<text>shield</text>
+			<text> </text>
+			<text>strength</text>
+		</line>
+		<line linenr="032" indent="&#160;">
+			<var>$T3</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>current</text>
+			<text> </text>
+			<text>shield</text>
+			<text> </text>
+			<text>strength</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>$MaxT3</var>
+		</line>
+		<line linenr="033" indent="&#160;" />
+		<line linenr="034" indent="&#160;">
+			<comment>* Sends the introductory message</comment>
+		</line>
+		<line linenr="035" indent="&#160;">
+			<var>$Msg</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>sprintf</text>
+			<text>:</text>
+			<text> </text>
+			<text>pageid</text>
+			<text>=</text>
+			<var>8387</var>
+			<text> </text>
+			<text>textid</text>
+			<text>=</text>
+			<var>19</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="036" indent="&#160;">
+			<text>write</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>player</text>
+			<text> </text>
+			<text>logbook</text>
+			<text> </text>
+			<var>$Msg</var>
+		</line>
+		<line linenr="037" indent="&#160;">
+			<text>send</text>
+			<text> </text>
+			<text>incoming</text>
+			<text> </text>
+			<text>message</text>
+			<text> </text>
+			<var>$Msg</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>player</text>
+			<text>:</text>
+			<text> </text>
+			<text>display</text>
+			<text> </text>
+			<text>it</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="038" indent="&#160;" />
+		<line linenr="039" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>500</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="040" indent="&#160;" />
+		<line linenr="041" indent="&#160;">
+			<var>$smsg2</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'Safe Travels '</text>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>$plname</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>'!'</text>
+		</line>
+		<line linenr="042" indent="&#160;">
+			<text>display</text>
+			<text> </text>
+			<text>info</text>
+			<text> </text>
+			<text>box</text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text> </text>
+			<var>$smsg2</var>
+			<text>,</text>
+			<text> </text>
+			<text>icon</text>
+			<text>=</text>
+			<text> </text>
+			<var>51</var>
+			<text>,</text>
+			<text> </text>
+			<text>timeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>10000</var>
+			<text>,</text>
+			<text> </text>
+			<text>fadeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>1000</var>
+		</line>
+		<line linenr="043" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="044" indent="" />
+		<line linenr="045" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="SWLU.InitGamestart.Deluded_Scoundrel" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="2" />
+			<sval type="array" size="10">
+				<sval type="string" val="plname" />
+				<sval type="string" val="smsg" />
+				<sval type="string" val="T1" />
+				<sval type="string" val="MaxT1" />
+				<sval type="string" val="T2" />
+				<sval type="string" val="MaxT2" />
+				<sval type="string" val="T3" />
+				<sval type="string" val="MaxT3" />
+				<sval type="string" val="Msg" />
+				<sval type="string" val="smsg2" />
+			</sval>
+			<sval type="array" size="30">
+				<sval type="array" size="2">
+					<sval type="int" val="1070" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610605309" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Dscoundrel" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="1926" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Deluded Scoundrel" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1070" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="19">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Initializing GameStart " />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
+					<sval type="string" val="..." />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-4" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1861" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+					<sval type="int" val="750" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="100" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="1801" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="458790" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="65544" />
+					<sval type="int" val="917511" />
+					<sval type="int" val="4" />
+					<sval type="int" val="615" />
+					<sval type="int" val="4" />
+					<sval type="int" val="38900" />
+					<sval type="int" val="4" />
+					<sval type="int" val="44900" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="589829" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="983056" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="715" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1048" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="458790" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="65544" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="35900" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-22600" />
+					<sval type="int" val="4" />
+					<sval type="int" val="27800" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="589829" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="983056" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="715" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1048" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="6" />
+					<sval type="int" val="9" />
+					<sval type="int" val="458790" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="65544" />
+					<sval type="int" val="1114113" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-54100" />
+					<sval type="int" val="4" />
+					<sval type="int" val="32300" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-54600" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="589829" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="983056" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="715" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1048" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="150" />
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+					<sval type="int" val="8387" />
+					<sval type="int" val="4" />
+					<sval type="int" val="19" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="400" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="203" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="500" />
+				</sval>
+				<sval type="array" size="19">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="5" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Safe Travels " />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
+					<sval type="string" val="!" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-4" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1861" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10000" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+			<sval type="array" size="15">
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="7" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="7" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="7" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Default ranks" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="8" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Spawns the three OWPs with treasure" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="13" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="23" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="23" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Sends the introductory message" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="26" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="27" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="29" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="29" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

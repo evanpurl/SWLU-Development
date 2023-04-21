@@ -1,0 +1,95 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.manager.gui.add</name>
+<version>100</version>
+<engineversion>44</engineversion>
+<description>Plugin Manager: Adds an object to the gui</description>
+<arguments>
+<argument index="1" name="a.id" type="Var/String" desc="Object ID" />
+<argument index="2" name="a.x" type="Var/Number" desc="Position X" />
+<argument index="3" name="a.y" type="Var/Number" desc="Position Y" />
+<argument index="4" name="a.timeout" type="Var/Number" desc="Timeout (ms)" />
+<argument index="5" name="a.objectstring" type="Var/String" desc="Object String" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$s&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'ADDGUI:%s:%s:%s:%s:%s'</var><text>,&#160;</text><var>$a.id</var><text>,&#160;</text><var>$a.timeout</var><text>,&#160;</text><var>$a.x</var><text>,&#160;</text><var>$a.y</var><text>,&#160;</text><var>$a.objectstring</var></line>
+<line linenr="002" indent=""><text>write&#160;to&#160;log&#160;file&#160;#</text><var>9005</var><text>&#160;&#160;append=</text><var>[TRUE]</var><text>&#160;&#160;value=</text><var>$s</var></line>
+<line linenr="003" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.manager.gui.add"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Plugin Manager: Adds an object to the gui"/>
+  <sval type="int" val="100"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="6">
+    <sval type="string" val="a.id"/>
+    <sval type="string" val="a.x"/>
+    <sval type="string" val="a.y"/>
+    <sval type="string" val="a.timeout"/>
+    <sval type="string" val="a.objectstring"/>
+    <sval type="string" val="s"/>
+  </sval>
+  <sval type="array" size="3">
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="ADDGUI:%s:%s:%s:%s:%s"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="404"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="9005"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="array" size="5">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Object ID"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="string" val="Position X"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="string" val="Position Y"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="string" val="Timeout (ms)"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Object String"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

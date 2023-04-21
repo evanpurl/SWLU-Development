@@ -1,0 +1,369 @@
+$Key.RaceShips = 'LitQB.RaceShips'
+$Key.SectorOwnerData = 'LitQB.SectorOwnerData'
+
+$MaxRaces = 5
+
+$RaceArgon = 0
+$RaceBoron = 1
+$RaceSplit = 2
+$RaceParanid = 3
+$RaceTeladi = 4
+$MaxRaces = 5
+
+$TL = array alloc: size=$MaxRaces
+$TS = array alloc: size=$MaxRaces
+$M4 = array alloc: size=$MaxRaces
+$M5 = array alloc: size=$MaxRaces
+$M3 = array alloc: size=$MaxRaces
+$M6 = array alloc: size=$MaxRaces
+$M7 = array alloc: size=$MaxRaces
+$M8 = array alloc: size=$MaxRaces
+$M1 = array alloc: size=$MaxRaces
+$M2 = array alloc: size=$MaxRaces
+
+* Number of different types of ships per race
+$TLShipCount = 1
+$TSShipCount = 6
+$M4ShipCount = 6
+$M5ShipCount = 5
+$M3ShipCount = 5
+$M6ShipCount = 3
+$M7ShipCount = 3
+$M8ShipCount = 1
+$M1ShipCount = 1
+$M2ShipCount = 2
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$TLShipCount
+ $TL[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$TSShipCount
+ $TS[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M4ShipCount
+ $M4[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M5ShipCount
+ $M5[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M3ShipCount
+ $M3[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M6ShipCount
+ $M6[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M7ShipCount
+ $M7[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M8ShipCount
+ $M8[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M1ShipCount
+ $M1[$ArrayCountDown] = $TempArray
+end
+
+$ArrayCountDown = $MaxRaces
+while $ArrayCountDown
+ dec $ArrayCountDown
+ $TempArray = array alloc: size=$M2ShipCount
+ $M2[$ArrayCountDown] = $TempArray
+end
+
+* TL
+$TL[$RaceArgon][0] = {Rebel MC80 Liberty Hauler}
+$TL[$RaceBoron][0] = {New Republic Neutron Star Bulk Cruiser}
+$TL[$RaceSplit][0] = {Remnant Neutron Star Bulk Cruiser}
+$TL[$RaceParanid][0] = {CIS Umbaran Cruiser}
+$TL[$RaceTeladi][0] = {Imperial Acclamator Hauler}
+
+* TS
+$TS[$RaceArgon][0] = {Rebel Gallofree Transport}
+$TS[$RaceArgon][1] = {Rebel YT-1300}
+$TS[$RaceArgon][2] = {Rebel YT-2400}
+$TS[$RaceArgon][3] = {Rebel CR-25 Freighter}
+$TS[$RaceArgon][4] = {Rebel YV-929 Super Freighter}
+$TS[$RaceArgon][5] = {Rebel Gallofree Transport}
+
+$TS[$RaceBoron][0] = {New Republic YT-2000}
+$TS[$RaceBoron][1] = {New Republic YT-2000}
+$TS[$RaceBoron][2] = {New Republic YT-2000}
+$TS[$RaceBoron][3] = {New Republic Gozanti Super Freighter}
+$TS[$RaceBoron][4] = {New Republic Gozanti Super Freighter}
+$TS[$RaceBoron][5] = {New Republic Gozanti Super Freighter}
+
+$TS[$RaceSplit][0] = {Mandalorian Gozanti C-ROC}
+$TS[$RaceSplit][1] = {Mandalorian CR-20}
+$TS[$RaceSplit][2] = {Mandalorian Action VI}
+$TS[$RaceSplit][3] = {Mandalorian YV-666}
+$TS[$RaceSplit][4] = {Mandalorian MM-13}
+$TS[$RaceSplit][5] = {Mandalorian CR-25 Freighter}
+
+$TS[$RaceParanid][0] = {CIS C-9979 Transport}
+$TS[$RaceParanid][1] = {CIS Action VI}
+$TS[$RaceParanid][2] = {CIS Action VI}
+$TS[$RaceParanid][3] = {CIS C-9979 Transport}
+$TS[$RaceParanid][4] = {CIS C-9979 Transport}
+$TS[$RaceParanid][5] = {CIS YV-666}
+
+$TS[$RaceTeladi][0] = {Republic LAAT Hauler}
+$TS[$RaceTeladi][1] = {Republic CR-20}
+$TS[$RaceTeladi][2] = {Republic Consular Courier}
+$TS[$RaceTeladi][3] = {Republic YV-100}
+$TS[$RaceTeladi][4] = {Republic CR-20}
+$TS[$RaceTeladi][5] = {Republic LAAT Hauler}
+
+* M4
+$M4[$RaceArgon][0] = {Rebel Z-95A}
+$M4[$RaceArgon][1] = {Rebel X-Wing B}
+$M4[$RaceArgon][2] = {Rebel X-Wing R}
+$M4[$RaceArgon][3] = {Rebel Z-95A}
+$M4[$RaceArgon][4] = {Rebel X-Wing B}
+$M4[$RaceArgon][5] = {Rebel X-Wing R}
+
+$M4[$RaceBoron][0] = {New Republic X-Wing T-65B}
+$M4[$RaceBoron][1] = {New Republic E-Wing}
+$M4[$RaceBoron][2] = {New Republic X-Wing T-65B}
+$M4[$RaceBoron][3] = {New Republic E-Wing}
+$M4[$RaceBoron][4] = {New Republic X-Wing T-65B}
+$M4[$RaceBoron][5] = {New Republic E-Wing}
+
+$M4[$RaceSplit][0] = {Mandalorian Dunelizard G1-M4-C G}
+$M4[$RaceSplit][1] = {Mandalorian Dunelizard G1-M4-C R}
+$M4[$RaceSplit][2] = {Mandalorian Dunelizard G2-M4-C G}
+$M4[$RaceSplit][3] = {Mandalorian Dunelizard G2-M4-C R}
+$M4[$RaceSplit][4] = {Mandalorian Dunelizard G1-M4-C G}
+$M4[$RaceSplit][5] = {Mandalorian Dunelizard G1-M4-C R}
+
+$M4[$RaceParanid][0] = {Enemy Race Pericles Enhanced}
+$M4[$RaceParanid][1] = {Enemy Race Pericles}
+$M4[$RaceParanid][2] = {Enemy Race Pericles Raider}
+$M4[$RaceParanid][3] = {Enemy Race Pericles Sentinel}
+$M4[$RaceParanid][4] = {Enemy Race Pericles Vanguard}
+$M4[$RaceParanid][5] = {Enemy Race Theseus}
+
+$M4[$RaceTeladi][0] = {Republic Z-95 AF-4}
+$M4[$RaceTeladi][1] = {Republic Z-95 AF-4}
+$M4[$RaceTeladi][2] = {Republic Z-95 AF-4}
+$M4[$RaceTeladi][3] = {Republic V-19 Torrent}
+$M4[$RaceTeladi][4] = {Republic V-19 Torrent}
+$M4[$RaceTeladi][5] = {Republic V-19 Torrent}
+
+* M5
+$M5[$RaceArgon][0] = {Rebel A-Wing}
+$M5[$RaceArgon][1] = {Rebel A-Wing}
+$M5[$RaceArgon][2] = {Rebel A-Wing}
+$M5[$RaceArgon][3] = {Rebel A-Wing}
+$M5[$RaceArgon][4] = {Rebel T-Wing}
+
+$M5[$RaceBoron][0] = {New Republic A-Wing Advanced}
+$M5[$RaceBoron][1] = {New Republic A-Wing Advanced}
+$M5[$RaceBoron][2] = {New Republic A-Wing Advanced}
+$M5[$RaceBoron][3] = {New Republic A-Wing RZ-2 B}
+$M5[$RaceBoron][4] = {New Republic A-Wing RZ-2 R}
+
+$M5[$RaceSplit][0] = {Mandalorian Scyk M3-A}
+$M5[$RaceSplit][1] = {Mandalorian Scyk M3-A}
+$M5[$RaceSplit][2] = {Mandalorian Scyk M3-A}
+$M5[$RaceSplit][3] = {Mandalorian Scyk M3-A}
+$M5[$RaceSplit][4] = {Mandalorian Scyk M3-A}
+
+$M5[$RaceParanid][0] = {CIS Vulture Droid}
+$M5[$RaceParanid][1] = {CIS Vulture Droid}
+$M5[$RaceParanid][2] = {CIS Vulture Droid}
+$M5[$RaceParanid][3] = {CIS Vulture Droid}
+$M5[$RaceParanid][4] = {CIS Vulture Droid}
+
+$M5[$RaceTeladi][0] = {Republic V-Wing}
+$M5[$RaceTeladi][1] = {Republic V-Wing}
+$M5[$RaceTeladi][2] = {Republic V-Wing}
+$M5[$RaceTeladi][3] = {Republic V-Wing}
+$M5[$RaceTeladi][4] = {Republic N-1 Starfighter}
+
+* M3
+$M3[$RaceArgon][0] = {Rebel Y-Wing Bomber}
+$M3[$RaceArgon][1] = {Rebel Y-Wing Bomber}
+$M3[$RaceArgon][2] = {Rebel Y-Wing Bomber}
+$M3[$RaceArgon][3] = {Rebel B-Wing Bomber}
+$M3[$RaceArgon][4] = {Rebel B-Wing Bomber}
+
+$M3[$RaceBoron][0] = {New Republic B-Wing Advanced}
+$M3[$RaceBoron][1] = {New Republic B-Wing Advanced}
+$M3[$RaceBoron][2] = {New Republic B-Wing Advanced}
+$M3[$RaceBoron][3] = {New Republic B-Wing Advanced}
+$M3[$RaceBoron][4] = {New Republic B-Wing Advanced}
+
+$M3[$RaceSplit][0] = {Mandalorian Kimogila M12-L G}
+$M3[$RaceSplit][1] = {Mandalorian Kimogila M12-L R}
+$M3[$RaceSplit][2] = {Mandalorian Skipray Blastboat}
+$M3[$RaceSplit][3] = {Mandalorian Kom'rk}
+$M3[$RaceSplit][4] = {Mandalorian Kom'rk}
+
+$M3[$RaceParanid][0] = {Enemy Race Medusa}
+$M3[$RaceParanid][1] = {Enemy Race Perseus}
+$M3[$RaceParanid][2] = {Enemy Race Perseus Raider}
+$M3[$RaceParanid][3] = {Enemy Race Perseus Sentinel}
+$M3[$RaceParanid][4] = {Enemy Race Perseus Vanguard}
+
+$M3[$RaceTeladi][0] = {Republic ARC-170}
+$M3[$RaceTeladi][1] = {Republic ARC-170}
+$M3[$RaceTeladi][2] = {Republic ARC-170}
+$M3[$RaceTeladi][3] = {Republic Y-Wing BTL-B}
+$M3[$RaceTeladi][4] = {Republic Y-Wing BTL-B}
+
+* M6
+$M6[$RaceArgon][0] = {Rebel Corellian Corvette}
+$M6[$RaceArgon][1] = {Rebel Hammerhead Corvette}
+$M6[$RaceArgon][2] = {Rebel Corellian Gunship}
+
+$M6[$RaceBoron][0] = {Rebel Corellian Corvette}
+$M6[$RaceBoron][1] = {New Republic YKL-37 Nova Courier}
+$M6[$RaceBoron][2] = {New Republic DP-20 Advanced}
+
+$M6[$RaceSplit][0] = {Mandalorian Crusader Corvette}
+$M6[$RaceSplit][1] = {Mandalorian Crusader Corvette}
+$M6[$RaceSplit][2] = {Mandalorian Crusader Corvette}
+
+$M6[$RaceParanid][0] = {Enemy Race Nemesis}
+$M6[$RaceParanid][1] = {Enemy Race Heavy Nemesis}
+$M6[$RaceParanid][2] = {Enemy Race Proteus}
+
+$M6[$RaceTeladi][0] = {Republic Consular Corvette}
+$M6[$RaceTeladi][1] = {Republic Consular Corvette}
+$M6[$RaceTeladi][2] = {Republic Consular Corvette}
+
+* M8
+$M8[$RaceArgon][0] = {Rebel Marauder Cruiser}
+$M8[$RaceBoron][0] = {New Republic K-Wing Bomber}
+$M8[$RaceSplit][0] = {Mandalorian Slave 1}
+$M8[$RaceParanid][0] = {Rebel Marauder Cruiser}
+$M8[$RaceTeladi][0] = {Rebel Marauder Cruiser}
+
+* M7
+$M7[$RaceArgon][0] = {Rebel Nebulon-B Frigate}
+$M7[$RaceArgon][1] = {Rebel Nebulon-B Frigate}
+$M7[$RaceArgon][2] = {Rebel Quasar-Fire Carrier}
+$M7[$RaceBoron][3] = {New Republic MC30c Frigate}
+$M7[$RaceBoron][4] = {Rebel Pelta Raider}
+
+$M7[$RaceBoron][0] = {New Republic DP-37 Frigate}
+$M7[$RaceBoron][1] = {New Republic MC40a Frigate}
+$M7[$RaceBoron][2] = {New Republic Assault Frigate MK1}
+$M7[$RaceBoron][3] = {New Republic MC30c Frigate}
+$M7[$RaceBoron][4] = {New Republic Free-Virgillia}
+
+$M7[$RaceSplit][0] = {Mandalorian Dreadnought Heavy Cruiser}
+$M7[$RaceSplit][1] = {Mandalorian Dreadnought Heavy Cruiser}
+$M7[$RaceSplit][2] = {Mandalorian Dreadnought Heavy Cruiser}
+
+$M7[$RaceParanid][0] = {CIS Munificent Frigate}
+$M7[$RaceParanid][1] = {CIS Munificent Frigate}
+$M7[$RaceParanid][2] = {CIS Munificent Frigate}
+
+$M7[$RaceTeladi][0] = {Republic Acclamator}
+$M7[$RaceTeladi][1] = {Republic Acclamator}
+$M7[$RaceTeladi][2] = {Republic Arquitens Cruiser}
+
+
+* M1
+$M1[$RaceArgon][0] = {Rebel MC75 Cruiser}
+$M1[$RaceBoron][0] = {Imperial Star Destroyer I-1}
+$M1[$RaceSplit][0] = {Mandalorian Kandosii}
+$M1[$RaceParanid][0] = {CIS Providence Dreadnought}
+$M1[$RaceTeladi][0] = {Republic Venator Star Destroyer}
+
+* M2
+$M2[$RaceArgon][0] = {Rebel MC80 Liberty}
+$M2[$RaceArgon][1] = {Rebel MC80 Independence}
+
+$M2[$RaceBoron][0] = {New Republic Nebula Star Destroyer}
+$M2[$RaceBoron][1] = {New Republic Assault Frigate MK2}
+
+$M2[$RaceSplit][0] = {Enemy Race Python}
+$M2[$RaceSplit][1] = {Enemy Race Taipan}
+
+$M2[$RaceParanid][0] = {CIS Recusant}
+$M2[$RaceParanid][1] = {CIS Recusant}
+
+$M2[$RaceTeladi][0] = {Republic Legacy Star Destroyer}
+$M2[$RaceTeladi][1] = {Republic Legacy Star Destroyer}
+
+
+$RaceShips = array alloc: size=0
+
+append $TL to array $RaceShips
+append $TS to array $RaceShips
+append $M5 to array $RaceShips
+append $M4 to array $RaceShips
+append $M3 to array $RaceShips
+append $M6 to array $RaceShips
+append $M8 to array $RaceShips
+append $M7 to array $RaceShips
+append $M1 to array $RaceShips
+append $M2 to array $RaceShips
+
+set global variable: name=$Key.RaceShips value=$RaceShips
+
+
+
+
+$Sectors = [PLAYERSHIP]-> find all sectors within 9999 jumps: Only known sectors=[FALSE]
+$SectorCount = size of array $Sectors
+$SectorOwnerData = array alloc: size=0
+$SectorOwnerData.Sectors = array alloc: size=0
+$SectorOwnerData.Owners = array alloc: size=0
+
+
+* 0 Array of sectors
+* 1 Array of Owners, matching sector indexes
+
+while $SectorCount
+ dec $SectorCount
+ $SectorCurrent = $Sectors[$SectorCount]
+ $Owner = $SectorCurrent-> get owner race
+ append $SectorCurrent to array $SectorOwnerData.Sectors
+ append $Owner to array $SectorOwnerData.Owners
+end
+
+append $SectorOwnerData.Sectors to array $SectorOwnerData
+append $SectorOwnerData.Owners to array $SectorOwnerData
+
+set global variable: name=$Key.SectorOwnerData value=$SectorOwnerData
+
+return null
+
+
+

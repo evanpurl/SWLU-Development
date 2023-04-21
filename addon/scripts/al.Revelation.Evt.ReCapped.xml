@@ -1,0 +1,645 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>al.Revelation.Evt.ReCapped</name>
+	<version>7</version>
+	<engineversion>50</engineversion>
+	<description>LitQB's Revelation: Event - Recaptured a sector</description>
+	<arguments>
+		<argument index="1" name="Sector" type="Var/Sector" desc="Sector" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="">
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>flying</text>
+			<text> </text>
+			<text>ware</text>
+			<text>:</text>
+			<text> </text>
+			<text>maintype</text>
+			<text>=</text>
+			<var>16</var>
+			<text> </text>
+			<text>subtype</text>
+			<text>=</text>
+			<var>17</var>
+			<text> </text>
+			<text>count</text>
+			<text>=</text>
+			<var>6</var>
+			<text> </text>
+			<text>sector</text>
+			<text>=</text>
+			<var>$Sector</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>selfdestruct</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="002" indent="" />
+		<line linenr="003" indent="" interruptable="@">
+			<var>$Owner</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>al.Revelation.OrigSecOwner</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>Sector</text>
+			<text>=</text>
+			<var>$Sector</var>
+		</line>
+		<line linenr="004" indent="">
+			<var>$Sector</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>owner</text>
+			<text> </text>
+			<text>race</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>$Owner</var>
+		</line>
+		<line linenr="005" indent="" />
+		<line linenr="006" indent="">
+			<var>$RaceText</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Sector</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>owner</text>
+			<text> </text>
+			<text>race</text>
+		</line>
+		<line linenr="007" indent="" interruptable="@">
+			<var>$RaceText</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>al.Revelation.GetRaceNum</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>Race</text>
+			<text>=</text>
+			<var>$RaceText</var>
+		</line>
+		<line linenr="008" indent="">
+			<var>$RaceText</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$RaceText</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>100</var>
+		</line>
+		<line linenr="009" indent="">
+			<var>$RaceText</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>sprintf</text>
+			<text>:</text>
+			<text> </text>
+			<text>pageid</text>
+			<text>=</text>
+			<var>8385</var>
+			<text> </text>
+			<text>textid</text>
+			<text>=</text>
+			<var>$RaceText</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="010" indent="" />
+		<line linenr="011" indent="">
+			<var>$Time</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>playing</text>
+			<text> </text>
+			<text>time</text>
+		</line>
+		<line linenr="012" indent="">
+			<var>$Time</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>in</text>
+			<text>-</text>
+			<text>game</text>
+			<text> </text>
+			<text>date</text>
+			<text> </text>
+			<text>string</text>
+			<text>:</text>
+			<text> </text>
+			<text>time</text>
+			<text>=</text>
+			<text> </text>
+			<var>$Time</var>
+			<text> </text>
+			<text>include</text>
+			<text> </text>
+			<text>time</text>
+			<text>=</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="013" indent="" />
+		<line linenr="014" indent="">
+			<var>$SectorText</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>convert</text>
+			<text> </text>
+			<text>string</text>
+			<text> </text>
+			<text>case</text>
+			<text>:</text>
+			<text> </text>
+			<text>string</text>
+			<text>=</text>
+			<text> </text>
+			<var>$Sector</var>
+			<text> </text>
+			<text>lowercase</text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="015" indent="">
+			<var>$RaceTextUpper</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>convert</text>
+			<text> </text>
+			<text>string</text>
+			<text> </text>
+			<text>case</text>
+			<text>:</text>
+			<text> </text>
+			<text>string</text>
+			<text>=</text>
+			<text> </text>
+			<var>$RaceText</var>
+			<text> </text>
+			<text>lowercase</text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="016" indent="" />
+		<line linenr="017" indent="" />
+		<line linenr="018" indent="" />
+		<line linenr="019" indent="" />
+		<line linenr="020" indent="">
+			<var>$Msg</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>sprintf</text>
+			<text>:</text>
+			<text> </text>
+			<text>pageid</text>
+			<text>=</text>
+			<var>8385</var>
+			<text> </text>
+			<text>textid</text>
+			<text>=</text>
+			<var>4</var>
+			<text>,</text>
+			<text> </text>
+			<var>$RaceText</var>
+			<text>,</text>
+			<text> </text>
+			<var>$Time</var>
+			<text>,</text>
+			<text> </text>
+			<var>$SectorText</var>
+			<text>,</text>
+			<text> </text>
+			<var>$RaceTextUpper</var>
+			<text>,</text>
+			<text> </text>
+			<var>$SectorText</var>
+		</line>
+		<line linenr="021" indent="">
+			<text>send</text>
+			<text> </text>
+			<text>incoming</text>
+			<text> </text>
+			<text>message</text>
+			<text> </text>
+			<var>$Msg</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>player</text>
+			<text>:</text>
+			<text> </text>
+			<text>display</text>
+			<text> </text>
+			<text>it</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="022" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>al.Revelation.Debug.Write</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>Msg</text>
+			<text>=</text>
+			<var>$Msg</var>
+		</line>
+		<line linenr="023" indent="" />
+		<line linenr="024" indent="" />
+		<line linenr="025" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$Owner</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[Unknown]</var>
+			<text> </text>
+			<text>OR</text>
+			<text> </text>
+			<var>$Owner</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[Xenon]</var>
+		</line>
+		<line linenr="026" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>al.Revelation.SpawnJobs</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>Sector</text>
+			<text>=</text>
+			<var>$Sector</var>
+			<text> </text>
+			<text>DefendHeavy</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="027" indent="" />
+		<line linenr="028" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="029" indent="" />
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="al.Revelation.Evt.ReCapped" />
+			<sval type="int" val="50" />
+			<sval type="string" val="LitQB's Revelation: Event - Recaptured a sector" />
+			<sval type="int" val="7" />
+			<sval type="int" val="0" />
+			<sval type="array" size="7">
+				<sval type="string" val="Sector" />
+				<sval type="string" val="Owner" />
+				<sval type="string" val="RaceText" />
+				<sval type="string" val="Time" />
+				<sval type="string" val="SectorText" />
+				<sval type="string" val="RaceTextUpper" />
+				<sval type="string" val="Msg" />
+			</sval>
+			<sval type="array" size="17">
+				<sval type="array" size="18">
+					<sval type="int" val="776" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="16" />
+					<sval type="int" val="4" />
+					<sval type="int" val="17" />
+					<sval type="int" val="4" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="al.Revelation.OrigSecOwner" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1030" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="701" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="al.Revelation.GetRaceNum" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="100" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="150" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="8385" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="141" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1932" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1933" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1933" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="150" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="8385" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="203" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="al.Revelation.Debug.Write" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="25">
+					<sval type="int" val="104" />
+					<sval type="int" val="-536866809" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="14" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="6" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="10" />
+					<sval type="int" val="7" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="10" />
+					<sval type="int" val="-4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-5" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="al.Revelation.SpawnJobs" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="14" />
+					<sval type="string" val="Sector" />
+				</sval>
+			</sval>
+			<sval type="array" size="12">
+				<sval type="array" size="2">
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="7" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="14" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="14" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="16" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="17" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

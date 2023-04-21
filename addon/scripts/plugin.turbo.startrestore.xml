@@ -1,0 +1,116 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.turbo.startrestore</name>
+<version>1</version>
+<engineversion>44</engineversion>
+<description>Turbo Booster: Start to restore energy levels</description>
+<arguments>
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$AFTERBURN.TASK&#160;=&#160;</var><var>23</var></line>
+<line linenr="002" indent=""></line>
+<line linenr="003" indent=""><comment><text>*&#160;</text><var>wait&#160;for&#160;turbo&#160;booster&#160;task&#160;to&#160;end</var></comment></line>
+<line linenr="004" indent=""><var>while&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;is&#160;task&#160;</text><var>$AFTERBURN.TASK</var><text>&#160;in&#160;use</text></line>
+<line linenr="005" interruptable="@" indent="&#160;"><var>=&#160;</var><text>wait&#160;</text><var>100</var><text>&#160;ms</text></line>
+<line linenr="006" indent=""><text>end</text></line>
+<line linenr="007" indent=""></line>
+<line linenr="008" indent=""><comment><text>*&#160;</text><var>start&#160;the&#160;restore&#160;task</var></comment></line>
+<line linenr="009" indent=""><var>[THIS]&#160;-&gt;</var><text>&#160;start&#160;task&#160;</text><var>$AFTERBURN.TASK</var><text>&#160;with&#160;script&#160;</text><call>plugin.turbo.restore</call><text>&#160;and&#160;prio&#160;</text><var>1</var><text>:&#160;arg1=</text><var>null</var><text>&#160;arg2=</text><var>null</var><text>&#160;arg3=</text><var>null</var><text>&#160;arg4=</text><var>null</var><text>&#160;arg5=</text><var>null</var></line>
+<line linenr="010" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.turbo.startrestore"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Turbo Booster: Start to restore energy levels"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="1">
+    <sval type="string" val="AFTERBURN.TASK"/>
+  </sval>
+  <sval type="array" size="6">
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="23"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="1073"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1610611703"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="105"/>
+      <sval type="int" val="-2147483647"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="100"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="18">
+      <sval type="int" val="1017"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="plugin.turbo.restore"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="array" size="5">
+    <sval type="array" size="2">
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="wait for turbo booster task to end"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="start the restore task"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

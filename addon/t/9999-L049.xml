@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language id="49">
+
+<page id="9999">
+ <t id="100000">Mehrere Klassen</t>
+ <t id="100001">Transporter</t>
+ <t id="100002">Militärschiffe</t>
+ <t id="100003">Schiffsklasse</t>
+ <t id="100004">Zu nutzende Schiffsklasse wählen</t>
+ <t id="100010">Alle Jäger</t>
+ <t id="100011">Alle Frachter</t>
+ <t id="100012">Alle kleinen Schiffe</t>
+ <t id="100013">Alle Großraumer</t>
+ <t id="100014">Alle Träger</t>
+ <t id="100015">Alle Schiffe</t>
+ <t id="100100">TS:      Kleiner Transporter</t>
+ <t id="100101">TP:      Passagiertransporter</t>
+ <t id="100102">TM:      Militärtransporter</t>
+ <t id="100103">TL:      Stationstransporter</t>
+ <t id="100200">M5:      Scout</t>
+ <t id="100201">M4:      Abfängjäger</t>
+ <t id="100202">M3:      Schwerer Jäger</t>
+ <t id="100203">M8:      Bomber</t>
+ <t id="100204">M6:      Korvette</t>
+ <t id="100205">M7:      Fregatte</t>
+ <t id="100206">M7M:     Raketenfregatte</t>
+ <t id="100207">M2:      Zerstörer</t>
+ <t id="100208">M1:      Träger</t>
+</page>
+
+</language>

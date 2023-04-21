@@ -1,0 +1,110 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.turbo.restore</name>
+<version>1</version>
+<engineversion>44</engineversion>
+<description>Turbo Booster: Retore Energy</description>
+<arguments>
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><comment><text>*&#160;</text><var>Restores&#160;the&#160;amount&#160;of&#160;energy&#160;avaialbl&#160;to&#160;the&#160;turbo&#160;booster&#160;back&#160;to&#160;100%</var></comment></line>
+<line linenr="002" indent=""></line>
+<line linenr="003" indent=""><var>$percent&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;get&#160;local&#160;variable:&#160;name=</text><var>'afterburn.energy'</var></line>
+<line linenr="004" indent=""><var>while&#160;</var><var>$percent</var><text>&#160;</text><var>&lt;</var><text>&#160;</text><var>100</var></line>
+<line linenr="005" interruptable="@" indent="&#160;"><var>=&#160;</var><text>wait&#160;</text><var>500</var><text>&#160;ms</text></line>
+<line linenr="006" indent="&#160;"><text>inc&#160;</text><var>$percent&#160;=&#160;</var></line>
+<line linenr="007" indent="&#160;"><var>[THIS]&#160;-&gt;</var><text>&#160;set&#160;local&#160;variable:&#160;name=</text><var>'afterburn.energy'</var><text>&#160;value=</text><var>$percent</var></line>
+<line linenr="008" indent=""><text>end</text></line>
+<line linenr="009" indent=""></line>
+<line linenr="010" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.turbo.restore"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Turbo Booster: Retore Energy"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="1">
+    <sval type="string" val="percent"/>
+  </sval>
+  <sval type="array" size="7">
+    <sval type="array" size="6">
+      <sval type="int" val="156"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="afterburn.energy"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610611191"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="100"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="105"/>
+      <sval type="int" val="-2147483647"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="500"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="142"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="155"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="afterburn.energy"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="array" size="4">
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Restores the amount of energy avaialbl to the turbo booster back to 100%"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="0"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="6"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="6"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

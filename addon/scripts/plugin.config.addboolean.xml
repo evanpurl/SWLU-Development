@@ -1,0 +1,135 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.config.addboolean</name>
+<version>3</version>
+<engineversion>44</engineversion>
+<description>Community Configuration: Add a boolean setting</description>
+<arguments>
+<argument index="1" name="id" type="Var/String" desc="Unique ID" />
+<argument index="2" name="a.text" type="Var/String" desc="Option Text" />
+<argument index="3" name="script" type="Var/String" desc="Setting Script Name" />
+<argument index="4" name="section" type="Var/String" desc="Add to section" />
+<argument index="5" name="a.default" type="Var/Boolean" desc="Default Value" />
+<argument index="6" name="a.menu" type="Var/String" desc="Menu" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><comment><text>*&#160;</text><var>Community&#160;Plugin&#160;Configurations</var></comment></line>
+<line linenr="002" indent=""><comment><text>*&#160;</text><var>=============================</var></comment></line>
+<line linenr="003" indent=""><comment><text>*&#160;</text><var>Adds&#160;a&#160;boolean&#160;setting&#160;(On/Off)</var></comment></line>
+<line linenr="004" indent=""><comment><text>*&#160;</text><var>Author:&#160;Cycrow</var></comment></line>
+<line linenr="005" indent=""><comment><text>*&#160;</text><var>Updated:&#160;03-01-2010</var></comment></line>
+<line linenr="006" indent=""><comment><text>*&#160;</text><var>=============================</var></comment></line>
+<line linenr="007" interruptable="@" indent=""><var>=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.dooption</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>$id</var><text>&#160;</text><text>&#160;Option&#160;Text=</text><var>$a.text</var><text>&#160;</text><text>&#160;Setting&#160;Script&#160;Name=</text><var>$script</var><text>&#160;</text><text>&#160;Add&#160;to&#160;section=</text><var>$section</var><text>&#160;</text><text>&#160;Default&#160;Value=</text><var>$a.default</var><text>&#160;</text><text>&#160;Type=</text><var>'boolean'</var><text>&#160;</text><text>&#160;Extra&#160;values=</text><var>null</var><text>&#160;</text><text>&#160;Add&#160;Menu=</text><var>$a.menu</var></line>
+<line linenr="008" indent=""><text>return&#160;</text><var>[TRUE]</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.config.addboolean"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Community Configuration: Add a boolean setting"/>
+  <sval type="int" val="3"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="6">
+    <sval type="string" val="id"/>
+    <sval type="string" val="a.text"/>
+    <sval type="string" val="script"/>
+    <sval type="string" val="section"/>
+    <sval type="string" val="a.default"/>
+    <sval type="string" val="a.menu"/>
+  </sval>
+  <sval type="array" size="2">
+    <sval type="array" size="22">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.dooption"/>
+      <sval type="int" val="-2147483647"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="boolean"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+  </sval>
+  <sval type="array" size="6">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Unique ID"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Option Text"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Setting Script Name"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Add to section"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="63"/>
+      <sval type="string" val="Default Value"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Menu"/>
+    </sval>
+  </sval>
+  <sval type="array" size="6">
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Community Plugin Configurations"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="============================="/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Adds a boolean setting (On/Off)"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Author: Cycrow"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Updated: 03-01-2010"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="============================="/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

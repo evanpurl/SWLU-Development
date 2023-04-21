@@ -1,0 +1,311 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.turbo.priomenu</name>
+<version>1</version>
+<engineversion>44</engineversion>
+<description>Turbo Booster: Priority Menu Selection</description>
+<arguments>
+<argument index="1" name="a.setting" type="Value" desc="Setting Array" />
+<argument index="2" name="a.menu" type="Value" desc="Menu" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$pageid&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'pageid.afterburn'</var></line>
+<line linenr="002" indent=""></line>
+<line linenr="003" indent=""><var>$a&#160;=&#160;</var><var>$a.setting</var><text>[</text><var>4</var><text>]</text></line>
+<line linenr="004" indent=""></line>
+<line linenr="005" indent=""><var>$i&#160;=&#160;</var><var>0</var></line>
+<line linenr="006" indent=""><var>while&#160;</var><var>$i</var><text>&#160;</text><var>&lt;</var><text>&#160;</text><var>4</var></line>
+<line linenr="007" indent="&#160;"><var>$type&#160;=&#160;</var><var>$a</var><text>[</text><var>$i</var><text>]</text></line>
+<line linenr="008" indent="&#160;"><var>$arr&#160;=&#160;</var><text>&#160;create&#160;new&#160;array,&#160;arguments=</text><var>'CUSTOM'</var><text>,&#160;</text><var>'turbo.prio'</var><text>,&#160;</text><var>'plugin.turbo.prioret'</var><text>,&#160;</text><var>$i</var><text>,&#160;</text><var>null</var></line>
+<line linenr="009" indent="&#160;"><text>inc&#160;</text><var>$i&#160;=&#160;</var></line>
+<line linenr="010" indent="&#160;"><var>if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>1</var></line>
+<line linenr="011" indent="&#160;&#160;"><var>$text&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'%s'</var><text>,&#160;</text><var>Spaceflies</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="012" indent="&#160;"><var>else&#160;if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>2</var></line>
+<line linenr="013" indent="&#160;&#160;"><var>$text&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'%s'</var><text>,&#160;</text><var>Energy&#160;Cells</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="014" indent="&#160;"><var>else&#160;if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>3</var></line>
+<line linenr="015" indent="&#160;&#160;"><var>$text&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$pageid</var><text>&#160;id=</text><var>21</var></line>
+<line linenr="016" indent="&#160;"><var>else&#160;if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>4</var></line>
+<line linenr="017" indent="&#160;&#160;"><var>$text&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$pageid</var><text>&#160;id=</text><var>20</var></line>
+<line linenr="018" indent="&#160;"><text>end</text></line>
+<line linenr="019" indent="&#160;"><var>$text&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'%s.&#160;%s'</var><text>,&#160;</text><var>$i</var><text>,&#160;</text><var>$text</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="020" indent="&#160;"><text>add&#160;custom&#160;menu&#160;item&#160;to&#160;array&#160;</text><var>$a.menu</var><text>:&#160;text=</text><var>$text</var><text>&#160;returnvalue=</text><var>$arr</var></line>
+<line linenr="021" indent=""><text>end</text></line>
+<line linenr="022" indent=""></line>
+<line linenr="023" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.turbo.priomenu"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Turbo Booster: Priority Menu Selection"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="8">
+    <sval type="string" val="a.setting"/>
+    <sval type="string" val="a.menu"/>
+    <sval type="string" val="pageid"/>
+    <sval type="string" val="a"/>
+    <sval type="string" val="i"/>
+    <sval type="string" val="type"/>
+    <sval type="string" val="arr"/>
+    <sval type="string" val="text"/>
+  </sval>
+  <sval type="array" size="22">
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="pageid.afterburn"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="129"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610607351"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="129"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="12">
+      <sval type="int" val="1415"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="CUSTOM"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.prio"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="plugin.turbo.prioret"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="142"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610610173"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="%s"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="1048581"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="18"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609403"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="%s"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="720896"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="18"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610608635"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="21"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="18"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610608123"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="20"/>
+    </sval>
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="%s. %s"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="1447"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="array" size="2">
+    <sval type="array" size="2">
+      <sval type="int" val="9"/>
+      <sval type="string" val="Setting Array"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="9"/>
+      <sval type="string" val="Menu"/>
+    </sval>
+  </sval>
+  <sval type="array" size="5">
+    <sval type="array" size="2">
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="2"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="18"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="21"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="21"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

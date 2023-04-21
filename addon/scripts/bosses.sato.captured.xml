@@ -1,0 +1,271 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>bosses.sato.captured</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="killer" type="Var/Ship" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="">
+			<comment>* ************************************************</comment>
+		</line>
+		<line linenr="002" indent="">
+			<comment>* SCRIPT NAME: bosses.sato.captured.xml</comment>
+		</line>
+		<line linenr="003" indent="">
+			<comment>* DESCRIPTION: </comment>
+		</line>
+		<line linenr="004" indent="">
+			<comment>* </comment>
+		</line>
+		<line linenr="005" indent="">
+			<comment>* AUTHOR: Purls          DATE: 6 December 2022</comment>
+		</line>
+		<line linenr="006" indent="">
+			<comment>* ************************************************</comment>
+		</line>
+		<line linenr="007" indent="">
+			<text>load</text>
+			<text> </text>
+			<text>text</text>
+			<text>:</text>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>1026</var>
+		</line>
+		<line linenr="008" indent="">
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>remove</text>
+			<text> </text>
+			<text>secondary</text>
+			<text> </text>
+			<text>signal</text>
+			<text>:</text>
+			<text> </text>
+			<text>signal</text>
+			<text>=</text>
+			<var>[SIGNAL_CAPTURED]</var>
+			<text>,</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'SWLU.Sato.Captured'</text>
+		</line>
+		<line linenr="009" indent="">
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>remove</text>
+			<text> </text>
+			<text>secondary</text>
+			<text> </text>
+			<text>signal</text>
+			<text>:</text>
+			<text> </text>
+			<text>signal</text>
+			<text>=</text>
+			<var>[SIGNAL_KILLED]</var>
+			<text>,</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'SWLU.Sato.Killed'</text>
+		</line>
+		<line linenr="010" indent="" />
+		<line linenr="011" indent="">
+			<var>$msg</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>read</text>
+			<text> </text>
+			<text>text</text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>1035</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>10</var>
+		</line>
+		<line linenr="012" indent="">
+			<text>send</text>
+			<text> </text>
+			<text>incoming</text>
+			<text> </text>
+			<text>message</text>
+			<text> </text>
+			<var>$msg</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>player</text>
+			<text>:</text>
+			<text> </text>
+			<text>display</text>
+			<text> </text>
+			<text>it</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="013" indent="">
+			<text>write</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>player</text>
+			<text> </text>
+			<text>logbook</text>
+			<text> </text>
+			<var>$msg</var>
+		</line>
+		<line linenr="014" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>null</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>SWLU.generateendorfleet</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>argument1</text>
+			<text>=</text>
+			<var>1027</var>
+		</line>
+		<line linenr="015" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="bosses.sato.captured" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="2">
+				<sval type="string" val="killer" />
+				<sval type="string" val="msg" />
+			</sval>
+			<sval type="array" size="8">
+				<sval type="array" size="3">
+					<sval type="int" val="151" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1026" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1340" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="18" />
+					<sval type="int" val="1004" />
+					<sval type="int" val="5" />
+					<sval type="string" val="SWLU.Sato.Captured" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1340" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="18" />
+					<sval type="int" val="1001" />
+					<sval type="int" val="5" />
+					<sval type="string" val="SWLU.Sato.Killed" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="126" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1035" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="203" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="400" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="SWLU.generateendorfleet" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1027" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="21" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="7">
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="************************************************" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="SCRIPT NAME: bosses.sato.captured.xml" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="DESCRIPTION: " />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="AUTHOR: Purls          DATE: 6 December 2022" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="************************************************" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

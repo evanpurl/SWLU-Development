@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language id="44">
+
+<page id="2010">
+<t id="530">Repair Ship...</t>
+<t id="531">Repair Ships in Sector...</t>
+</page>
+<page id="2011">
+<t id="530">Repair</t>
+<t id="531">Rep.Sec</t>
+</page>
+<page id="2008">
+<t id="530">COMMAND_GRAX_REPAIR_SHIP</t>
+<t id="531">COMMAND_GRAX_REPAIR_SHIP_SECTOR</t>
+</page>
+</language>

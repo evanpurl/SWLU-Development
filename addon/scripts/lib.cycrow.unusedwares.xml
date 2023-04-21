@@ -1,0 +1,215 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>lib.cycrow.unusedwares</name>
+<version>1</version>
+<engineversion>44</engineversion>
+<description>Cycrows Library: Get a list of unused wares in universe</description>
+<arguments>
+<argument index="1" name="a.main" type="Value" desc="Main Type" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$aWares&#160;=&#160;</var><text>&#160;array&#160;alloc:&#160;size=</text><var>0</var></line>
+<line linenr="002" indent=""></line>
+<line linenr="003" indent=""><var>$max&#160;=&#160;</var><text>&#160;get&#160;number&#160;of&#160;subtypes&#160;of&#160;maintype&#160;</text><var>$a.main</var></line>
+<line linenr="004" indent=""><var>$sub&#160;=&#160;</var><var>0</var></line>
+<line linenr="005" indent=""><var>while&#160;</var><var>$sub</var><text>&#160;</text><var>&lt;</var><text>&#160;</text><var>$max</var></line>
+<line linenr="006" indent="&#160;"><var>$ware&#160;=&#160;</var><text>&#160;get&#160;ware&#160;from&#160;maintype&#160;</text><var>$a.main</var><text>&#160;and&#160;subtype&#160;</text><var>$sub</var></line>
+<line linenr="007" indent="&#160;"><var>$text&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'%s'</var><text>,&#160;</text><var>$ware</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="008" indent="&#160;"><var>$subText&#160;=&#160;</var><text>&#160;get&#160;substring&#160;of&#160;</text><var>$text</var><text>&#160;offset=</text><var>0</var><text>&#160;length=</text><var>7</var></line>
+<line linenr="009" indent="&#160;"><var>if&#160;</var><var>$subText</var><text>&#160;</text><var>==</var><text>&#160;</text><var>'ZA_EMP_'</var><text>&#160;</text><var>OR</var><text>&#160;</text><var>$subText</var><text>&#160;</text><var>==</var><text>&#160;</text><var>'SS_WARE'</var><text>&#160;</text><var>OR</var><text>&#160;</text><var>$subText</var><text>&#160;</text><var>==</var><text>&#160;</text><var>'ReadTex'</var></line>
+<line linenr="010" interruptable="@" indent="&#160;&#160;"><var>if&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>lib.cycrow.iswareused</call><text>&#160;:&#160;</text><text>&#160;Ware=</text><var>$ware</var></line>
+<line linenr="011" indent="&#160;&#160;&#160;"><text>append&#160;</text><var>$ware</var><text>&#160;to&#160;array&#160;</text><var>$aWares</var></line>
+<line linenr="012" indent="&#160;&#160;"><text>end</text></line>
+<line linenr="013" indent="&#160;"><text>end</text></line>
+<line linenr="014" indent="&#160;"><text>inc&#160;</text><var>$sub&#160;=&#160;</var></line>
+<line linenr="015" indent=""><text>end</text></line>
+<line linenr="016" indent=""><text>return&#160;</text><var>$aWares</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="lib.cycrow.unusedwares"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Cycrows Library: Get a list of unused wares in universe"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="7">
+    <sval type="string" val="a.main"/>
+    <sval type="string" val="aWares"/>
+    <sval type="string" val="max"/>
+    <sval type="string" val="sub"/>
+    <sval type="string" val="ware"/>
+    <sval type="string" val="text"/>
+    <sval type="string" val="subText"/>
+  </sval>
+  <sval type="array" size="13">
+    <sval type="array" size="4">
+      <sval type="int" val="128"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="658"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609655"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="657"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="%s"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="1077"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="37">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610610173"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="ZA_EMP_"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="SS_WARE"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="ReadTex"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="-4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-5"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="-8"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-9"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="102"/>
+      <sval type="string" val="lib.cycrow.iswareused"/>
+      <sval type="int" val="-1610610173"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="142"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+  </sval>
+  <sval type="array" size="1">
+    <sval type="array" size="2">
+      <sval type="int" val="9"/>
+      <sval type="string" val="Main Type"/>
+    </sval>
+  </sval>
+  <sval type="array" size="4">
+    <sval type="array" size="2">
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="12"/>
+      <sval type="int" val="4"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

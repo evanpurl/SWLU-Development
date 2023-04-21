@@ -1,0 +1,6489 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>al.Revelation.DoGlblArrays</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description>LitQB's Revelation: Sets race ships array</description>
+	<arguments />
+	<sourcetext>
+		<line linenr="001" indent="">
+			<var>$Key.RaceShips</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'LitQB.RaceShips'</text>
+		</line>
+		<line linenr="002" indent="">
+			<var>$Key.SectorOwnerData</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'LitQB.SectorOwnerData'</text>
+		</line>
+		<line linenr="003" indent="" />
+		<line linenr="004" indent="">
+			<var>$MaxRaces</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>5</var>
+		</line>
+		<line linenr="005" indent="" />
+		<line linenr="006" indent="">
+			<var>$RaceArgon</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+		</line>
+		<line linenr="007" indent="">
+			<var>$RaceBoron</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="008" indent="">
+			<var>$RaceSplit</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>2</var>
+		</line>
+		<line linenr="009" indent="">
+			<var>$RaceParanid</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>3</var>
+		</line>
+		<line linenr="010" indent="">
+			<var>$RaceTeladi</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>4</var>
+		</line>
+		<line linenr="011" indent="">
+			<var>$MaxRaces</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>5</var>
+		</line>
+		<line linenr="012" indent="" />
+		<line linenr="013" indent="">
+			<var>$TL</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="014" indent="">
+			<var>$TS</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="015" indent="">
+			<var>$M4</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="016" indent="">
+			<var>$M5</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="017" indent="">
+			<var>$M3</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="018" indent="">
+			<var>$M6</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="019" indent="">
+			<var>$M7</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="020" indent="">
+			<var>$M8</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="021" indent="">
+			<var>$M1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="022" indent="">
+			<var>$M2</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="023" indent="" />
+		<line linenr="024" indent="">
+			<comment>* Number of different types of ships per race</comment>
+		</line>
+		<line linenr="025" indent="">
+			<var>$TLShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="026" indent="">
+			<var>$TSShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>6</var>
+		</line>
+		<line linenr="027" indent="">
+			<var>$M4ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>6</var>
+		</line>
+		<line linenr="028" indent="">
+			<var>$M5ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>5</var>
+		</line>
+		<line linenr="029" indent="">
+			<var>$M3ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>5</var>
+		</line>
+		<line linenr="030" indent="">
+			<var>$M6ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>3</var>
+		</line>
+		<line linenr="031" indent="">
+			<var>$M7ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>3</var>
+		</line>
+		<line linenr="032" indent="">
+			<var>$M8ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="033" indent="">
+			<var>$M1ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="034" indent="">
+			<var>$M2ShipCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>2</var>
+		</line>
+		<line linenr="035" indent="" />
+		<line linenr="036" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="037" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="038" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="039" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$TLShipCount</var>
+		</line>
+		<line linenr="040" indent="&#160;">
+			<var>$TL</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="041" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="042" indent="" />
+		<line linenr="043" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="044" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="045" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="046" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$TSShipCount</var>
+		</line>
+		<line linenr="047" indent="&#160;">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="048" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="049" indent="" />
+		<line linenr="050" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="051" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="052" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="053" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M4ShipCount</var>
+		</line>
+		<line linenr="054" indent="&#160;">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="055" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="056" indent="" />
+		<line linenr="057" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="058" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="059" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="060" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M5ShipCount</var>
+		</line>
+		<line linenr="061" indent="&#160;">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="062" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="063" indent="" />
+		<line linenr="064" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="065" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="066" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="067" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M3ShipCount</var>
+		</line>
+		<line linenr="068" indent="&#160;">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="069" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="070" indent="" />
+		<line linenr="071" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="072" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="073" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="074" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M6ShipCount</var>
+		</line>
+		<line linenr="075" indent="&#160;">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="076" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="077" indent="" />
+		<line linenr="078" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="079" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="080" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="081" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M7ShipCount</var>
+		</line>
+		<line linenr="082" indent="&#160;">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="083" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="084" indent="" />
+		<line linenr="085" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="086" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="087" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="088" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M8ShipCount</var>
+		</line>
+		<line linenr="089" indent="&#160;">
+			<var>$M8</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="090" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="091" indent="" />
+		<line linenr="092" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="093" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="094" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="095" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M1ShipCount</var>
+		</line>
+		<line linenr="096" indent="&#160;">
+			<var>$M1</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="097" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="098" indent="" />
+		<line linenr="099" indent="">
+			<var>$ArrayCountDown</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+		</line>
+		<line linenr="100" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="101" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$ArrayCountDown</var>
+		</line>
+		<line linenr="102" indent="&#160;">
+			<var>$TempArray</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$M2ShipCount</var>
+		</line>
+		<line linenr="103" indent="&#160;">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$ArrayCountDown</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$TempArray</var>
+		</line>
+		<line linenr="104" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="105" indent="" />
+		<line linenr="106" indent="">
+			<comment>* TL</comment>
+		</line>
+		<line linenr="107" indent="">
+			<var>$TL</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel MC80 Liberty Hauler}</var>
+		</line>
+		<line linenr="108" indent="">
+			<var>$TL</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Neutron Star Bulk Cruiser}</var>
+		</line>
+		<line linenr="109" indent="">
+			<var>$TL</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Remnant Neutron Star Bulk Cruiser}</var>
+		</line>
+		<line linenr="110" indent="">
+			<var>$TL</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Umbaran Cruiser}</var>
+		</line>
+		<line linenr="111" indent="">
+			<var>$TL</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Imperial Acclamator Hauler}</var>
+		</line>
+		<line linenr="112" indent="" />
+		<line linenr="113" indent="">
+			<comment>* TS</comment>
+		</line>
+		<line linenr="114" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Gallofree Transport}</var>
+		</line>
+		<line linenr="115" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel YT-1300}</var>
+		</line>
+		<line linenr="116" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel YT-2400}</var>
+		</line>
+		<line linenr="117" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel CR-25 Freighter}</var>
+		</line>
+		<line linenr="118" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel YV-929 Super Freighter}</var>
+		</line>
+		<line linenr="119" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Gallofree Transport}</var>
+		</line>
+		<line linenr="120" indent="" />
+		<line linenr="121" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic YT-2000}</var>
+		</line>
+		<line linenr="122" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic YT-2000}</var>
+		</line>
+		<line linenr="123" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic YT-2000}</var>
+		</line>
+		<line linenr="124" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Gozanti Super Freighter}</var>
+		</line>
+		<line linenr="125" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Gozanti Super Freighter}</var>
+		</line>
+		<line linenr="126" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Gozanti Super Freighter}</var>
+		</line>
+		<line linenr="127" indent="" />
+		<line linenr="128" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Gozanti C-ROC}</var>
+		</line>
+		<line linenr="129" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian CR-20}</var>
+		</line>
+		<line linenr="130" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Action VI}</var>
+		</line>
+		<line linenr="131" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian YV-666}</var>
+		</line>
+		<line linenr="132" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian MM-13}</var>
+		</line>
+		<line linenr="133" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian CR-25 Freighter}</var>
+		</line>
+		<line linenr="134" indent="" />
+		<line linenr="135" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS C-9979 Transport}</var>
+		</line>
+		<line linenr="136" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Action VI}</var>
+		</line>
+		<line linenr="137" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Action VI}</var>
+		</line>
+		<line linenr="138" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS C-9979 Transport}</var>
+		</line>
+		<line linenr="139" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Sheathipede Hauler}</var>
+		</line>
+		<line linenr="140" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS YV-666}</var>
+		</line>
+		<line linenr="141" indent="" />
+		<line linenr="142" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic LAAT Hauler}</var>
+		</line>
+		<line linenr="143" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic CR-20}</var>
+		</line>
+		<line linenr="144" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Consular Courier}</var>
+		</line>
+		<line linenr="145" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic YV-100}</var>
+		</line>
+		<line linenr="146" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic CR-20}</var>
+		</line>
+		<line linenr="147" indent="">
+			<var>$TS</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic LAAT Hauler}</var>
+		</line>
+		<line linenr="148" indent="" />
+		<line linenr="149" indent="">
+			<comment>* M4</comment>
+		</line>
+		<line linenr="150" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Z-95A}</var>
+		</line>
+		<line linenr="151" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel X-Wing B}</var>
+		</line>
+		<line linenr="152" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel X-Wing R}</var>
+		</line>
+		<line linenr="153" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Z-95A}</var>
+		</line>
+		<line linenr="154" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel X-Wing B}</var>
+		</line>
+		<line linenr="155" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel X-Wing R}</var>
+		</line>
+		<line linenr="156" indent="" />
+		<line linenr="157" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic X-Wing T-65B}</var>
+		</line>
+		<line linenr="158" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic E-Wing}</var>
+		</line>
+		<line linenr="159" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic X-Wing T-65B}</var>
+		</line>
+		<line linenr="160" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic E-Wing}</var>
+		</line>
+		<line linenr="161" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic X-Wing T-65B}</var>
+		</line>
+		<line linenr="162" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic E-Wing}</var>
+		</line>
+		<line linenr="163" indent="" />
+		<line linenr="164" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dunelizard G1-M4-C G}</var>
+		</line>
+		<line linenr="165" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dunelizard G1-M4-C R}</var>
+		</line>
+		<line linenr="166" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dunelizard G2-M4-C G}</var>
+		</line>
+		<line linenr="167" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dunelizard G2-M4-C R}</var>
+		</line>
+		<line linenr="168" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dunelizard G1-M4-C G}</var>
+		</line>
+		<line linenr="169" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dunelizard G1-M4-C R}</var>
+		</line>
+		<line linenr="170" indent="" />
+		<line linenr="171" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Droid Tri-Fighter}</var>
+		</line>
+		<line linenr="172" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Droid Tri-Fighter}</var>
+		</line>
+		<line linenr="173" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Droid Tri-Fighter}</var>
+		</line>
+		<line linenr="174" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Droid Tri-Fighter}</var>
+		</line>
+		<line linenr="175" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Droid Tri-Fighter}</var>
+		</line>
+		<line linenr="176" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Droid Tri-Fighter}</var>
+		</line>
+		<line linenr="177" indent="" />
+		<line linenr="178" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Z-95 AF-4}</var>
+		</line>
+		<line linenr="179" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Z-95 AF-4}</var>
+		</line>
+		<line linenr="180" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Z-95 AF-4}</var>
+		</line>
+		<line linenr="181" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic V-19 Torrent}</var>
+		</line>
+		<line linenr="182" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic V-19 Torrent}</var>
+		</line>
+		<line linenr="183" indent="">
+			<var>$M4</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>5</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic V-19 Torrent}</var>
+		</line>
+		<line linenr="184" indent="" />
+		<line linenr="185" indent="">
+			<comment>* M5</comment>
+		</line>
+		<line linenr="186" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel A-Wing}</var>
+		</line>
+		<line linenr="187" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel A-Wing}</var>
+		</line>
+		<line linenr="188" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel A-Wing}</var>
+		</line>
+		<line linenr="189" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel A-Wing}</var>
+		</line>
+		<line linenr="190" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel T-Wing}</var>
+		</line>
+		<line linenr="191" indent="" />
+		<line linenr="192" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic A-Wing Advanced}</var>
+		</line>
+		<line linenr="193" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic A-Wing Advanced}</var>
+		</line>
+		<line linenr="194" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic A-Wing Advanced}</var>
+		</line>
+		<line linenr="195" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic A-Wing RZ-2 B}</var>
+		</line>
+		<line linenr="196" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic A-Wing RZ-2 R}</var>
+		</line>
+		<line linenr="197" indent="" />
+		<line linenr="198" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Scyk M3-A}</var>
+		</line>
+		<line linenr="199" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Scyk M3-A}</var>
+		</line>
+		<line linenr="200" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Scyk M3-A}</var>
+		</line>
+		<line linenr="201" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Scyk M3-A}</var>
+		</line>
+		<line linenr="202" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Scyk M3-A}</var>
+		</line>
+		<line linenr="203" indent="" />
+		<line linenr="204" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Vulture Droid}</var>
+		</line>
+		<line linenr="205" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Vulture Droid}</var>
+		</line>
+		<line linenr="206" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Vulture Droid}</var>
+		</line>
+		<line linenr="207" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Vulture Droid}</var>
+		</line>
+		<line linenr="208" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Vulture Droid}</var>
+		</line>
+		<line linenr="209" indent="" />
+		<line linenr="210" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic V-Wing}</var>
+		</line>
+		<line linenr="211" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic V-Wing}</var>
+		</line>
+		<line linenr="212" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic V-Wing}</var>
+		</line>
+		<line linenr="213" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic V-Wing}</var>
+		</line>
+		<line linenr="214" indent="">
+			<var>$M5</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic N-1 Starfighter}</var>
+		</line>
+		<line linenr="215" indent="" />
+		<line linenr="216" indent="">
+			<comment>* M3</comment>
+		</line>
+		<line linenr="217" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Y-Wing Bomber}</var>
+		</line>
+		<line linenr="218" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Y-Wing Bomber}</var>
+		</line>
+		<line linenr="219" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Y-Wing Bomber}</var>
+		</line>
+		<line linenr="220" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel B-Wing Bomber}</var>
+		</line>
+		<line linenr="221" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel B-Wing Bomber}</var>
+		</line>
+		<line linenr="222" indent="" />
+		<line linenr="223" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic B-Wing Advanced}</var>
+		</line>
+		<line linenr="224" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic B-Wing Advanced}</var>
+		</line>
+		<line linenr="225" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic B-Wing Advanced}</var>
+		</line>
+		<line linenr="226" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic B-Wing Advanced}</var>
+		</line>
+		<line linenr="227" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic B-Wing Advanced}</var>
+		</line>
+		<line linenr="228" indent="" />
+		<line linenr="229" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Kimogila M12-L G}</var>
+		</line>
+		<line linenr="230" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Kimogila M12-L R}</var>
+		</line>
+		<line linenr="231" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Skipray Blastboat}</var>
+		</line>
+		<line linenr="232" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Kom'rk}</var>
+		</line>
+		<line linenr="233" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Kom'rk}</var>
+		</line>
+		<line linenr="234" indent="" />
+		<line linenr="235" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Umbaran Fighter}</var>
+		</line>
+		<line linenr="236" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Umbaran Fighter}</var>
+		</line>
+		<line linenr="237" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Umbaran Fighter}</var>
+		</line>
+		<line linenr="238" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Umbaran Fighter}</var>
+		</line>
+		<line linenr="239" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Umbaran Fighter}</var>
+		</line>
+		<line linenr="240" indent="" />
+		<line linenr="241" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic ARC-170}</var>
+		</line>
+		<line linenr="242" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic ARC-170}</var>
+		</line>
+		<line linenr="243" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic ARC-170}</var>
+		</line>
+		<line linenr="244" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Y-Wing BTL-B}</var>
+		</line>
+		<line linenr="245" indent="">
+			<var>$M3</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Y-Wing BTL-B}</var>
+		</line>
+		<line linenr="246" indent="" />
+		<line linenr="247" indent="">
+			<comment>* M6</comment>
+		</line>
+		<line linenr="248" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Corellian Corvette}</var>
+		</line>
+		<line linenr="249" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Hammerhead Corvette}</var>
+		</line>
+		<line linenr="250" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Corellian Gunship}</var>
+		</line>
+		<line linenr="251" indent="" />
+		<line linenr="252" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Corellian Corvette}</var>
+		</line>
+		<line linenr="253" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic YKL-37 Nova Courier}</var>
+		</line>
+		<line linenr="254" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic DP-20 Advanced}</var>
+		</line>
+		<line linenr="255" indent="" />
+		<line linenr="256" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Crusader Corvette}</var>
+		</line>
+		<line linenr="257" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Crusader Corvette}</var>
+		</line>
+		<line linenr="258" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Crusader Corvette}</var>
+		</line>
+		<line linenr="259" indent="" />
+		<line linenr="260" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Longhorn}</var>
+		</line>
+		<line linenr="261" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Longhorn}</var>
+		</line>
+		<line linenr="262" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Longhorn}</var>
+		</line>
+		<line linenr="263" indent="" />
+		<line linenr="264" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Consular Corvette}</var>
+		</line>
+		<line linenr="265" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Consular Corvette}</var>
+		</line>
+		<line linenr="266" indent="">
+			<var>$M6</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Consular Corvette}</var>
+		</line>
+		<line linenr="267" indent="" />
+		<line linenr="268" indent="">
+			<comment>* M8</comment>
+		</line>
+		<line linenr="269" indent="">
+			<var>$M8</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Marauder Cruiser}</var>
+		</line>
+		<line linenr="270" indent="">
+			<var>$M8</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic K-Wing Bomber}</var>
+		</line>
+		<line linenr="271" indent="">
+			<var>$M8</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Slave 1}</var>
+		</line>
+		<line linenr="272" indent="">
+			<var>$M8</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Marauder Cruiser}</var>
+		</line>
+		<line linenr="273" indent="">
+			<var>$M8</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Marauder Cruiser}</var>
+		</line>
+		<line linenr="274" indent="" />
+		<line linenr="275" indent="">
+			<comment>* M7</comment>
+		</line>
+		<line linenr="276" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Nebulon-B Frigate}</var>
+		</line>
+		<line linenr="277" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Nebulon-B Frigate}</var>
+		</line>
+		<line linenr="278" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Quasar-Fire Carrier}</var>
+		</line>
+		<line linenr="279" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic MC30c Frigate}</var>
+		</line>
+		<line linenr="280" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel Pelta Raider}</var>
+		</line>
+		<line linenr="281" indent="" />
+		<line linenr="282" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic DP-37 Frigate}</var>
+		</line>
+		<line linenr="283" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic MC40a Frigate}</var>
+		</line>
+		<line linenr="284" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Assault Frigate MK1}</var>
+		</line>
+		<line linenr="285" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>3</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic MC30c Frigate}</var>
+		</line>
+		<line linenr="286" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>4</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Free-Virgillia}</var>
+		</line>
+		<line linenr="287" indent="" />
+		<line linenr="288" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dreadnought Heavy Cruiser}</var>
+		</line>
+		<line linenr="289" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dreadnought Heavy Cruiser}</var>
+		</line>
+		<line linenr="290" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Dreadnought Heavy Cruiser}</var>
+		</line>
+		<line linenr="291" indent="" />
+		<line linenr="292" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Munificent Frigate}</var>
+		</line>
+		<line linenr="293" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Munificent Frigate}</var>
+		</line>
+		<line linenr="294" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Munificent Frigate}</var>
+		</line>
+		<line linenr="295" indent="" />
+		<line linenr="296" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Acclamator}</var>
+		</line>
+		<line linenr="297" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Acclamator}</var>
+		</line>
+		<line linenr="298" indent="">
+			<var>$M7</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Arquitens Cruiser}</var>
+		</line>
+		<line linenr="299" indent="" />
+		<line linenr="300" indent="" />
+		<line linenr="301" indent="">
+			<comment>* M1</comment>
+		</line>
+		<line linenr="302" indent="">
+			<var>$M1</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel MC75 Cruiser}</var>
+		</line>
+		<line linenr="303" indent="">
+			<var>$M1</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Imperial Star Destroyer I-1}</var>
+		</line>
+		<line linenr="304" indent="">
+			<var>$M1</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Kandosii}</var>
+		</line>
+		<line linenr="305" indent="">
+			<var>$M1</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Providence Dreadnought}</var>
+		</line>
+		<line linenr="306" indent="">
+			<var>$M1</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Venator Star Destroyer}</var>
+		</line>
+		<line linenr="307" indent="" />
+		<line linenr="308" indent="">
+			<comment>* M2</comment>
+		</line>
+		<line linenr="309" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel MC80 Liberty}</var>
+		</line>
+		<line linenr="310" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceArgon</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Rebel MC80 Independence}</var>
+		</line>
+		<line linenr="311" indent="" />
+		<line linenr="312" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Nebula Star Destroyer}</var>
+		</line>
+		<line linenr="313" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceBoron</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{New Republic Assault Frigate MK2}</var>
+		</line>
+		<line linenr="314" indent="" />
+		<line linenr="315" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Keldabe}</var>
+		</line>
+		<line linenr="316" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceSplit</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Mandalorian Keldabe}</var>
+		</line>
+		<line linenr="317" indent="" />
+		<line linenr="318" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Recusant}</var>
+		</line>
+		<line linenr="319" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceParanid</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{CIS Subjugator}</var>
+		</line>
+		<line linenr="320" indent="" />
+		<line linenr="321" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Legacy Star Destroyer}</var>
+		</line>
+		<line linenr="322" indent="">
+			<var>$M2</var>
+			<text>[</text>
+			<var>$RaceTeladi</var>
+			<text>]</text>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>{Republic Legacy Star Destroyer}</var>
+		</line>
+		<line linenr="323" indent="" />
+		<line linenr="324" indent="" />
+		<line linenr="325" indent="">
+			<var>$RaceShips</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="326" indent="" />
+		<line linenr="327" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$TL</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="328" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$TS</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="329" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M5</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="330" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M4</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="331" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M3</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="332" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M6</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="333" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M8</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="334" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M7</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="335" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M1</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="336" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$M2</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="337" indent="" />
+		<line linenr="338" indent="">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<var>$Key.RaceShips</var>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$RaceShips</var>
+		</line>
+		<line linenr="339" indent="" />
+		<line linenr="340" indent="" />
+		<line linenr="341" indent="" />
+		<line linenr="342" indent="" />
+		<line linenr="343" indent="">
+			<var>$Sectors</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>find</text>
+			<text> </text>
+			<text>all</text>
+			<text> </text>
+			<text>sectors</text>
+			<text> </text>
+			<text>within</text>
+			<text> </text>
+			<var>9999</var>
+			<text> </text>
+			<text>jumps</text>
+			<text>:</text>
+			<text> </text>
+			<text>Only</text>
+			<text> </text>
+			<text>known</text>
+			<text> </text>
+			<text>sectors</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="344" indent="">
+			<var>$SectorCount</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$Sectors</var>
+		</line>
+		<line linenr="345" indent="">
+			<var>$SectorOwnerData</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="346" indent="">
+			<var>$SectorOwnerData.Sectors</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="347" indent="">
+			<var>$SectorOwnerData.Owners</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="348" indent="" />
+		<line linenr="349" indent="" />
+		<line linenr="350" indent="">
+			<comment>* 0 Array of sectors</comment>
+		</line>
+		<line linenr="351" indent="">
+			<comment>* 1 Array of Owners, matching sector indexes</comment>
+		</line>
+		<line linenr="352" indent="" />
+		<line linenr="353" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$SectorCount</var>
+		</line>
+		<line linenr="354" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$SectorCount</var>
+		</line>
+		<line linenr="355" indent="&#160;">
+			<var>$SectorCurrent</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Sectors</var>
+			<text>[</text>
+			<var>$SectorCount</var>
+			<text>]</text>
+		</line>
+		<line linenr="356" indent="&#160;">
+			<var>$Owner</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$SectorCurrent</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>owner</text>
+			<text> </text>
+			<text>race</text>
+		</line>
+		<line linenr="357" indent="&#160;">
+			<text>append</text>
+			<text> </text>
+			<var>$SectorCurrent</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$SectorOwnerData.Sectors</var>
+		</line>
+		<line linenr="358" indent="&#160;">
+			<text>append</text>
+			<text> </text>
+			<var>$Owner</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$SectorOwnerData.Owners</var>
+		</line>
+		<line linenr="359" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="360" indent="" />
+		<line linenr="361" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$SectorOwnerData.Sectors</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$SectorOwnerData</var>
+		</line>
+		<line linenr="362" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$SectorOwnerData.Owners</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$SectorOwnerData</var>
+		</line>
+		<line linenr="363" indent="" />
+		<line linenr="364" indent="">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<var>$Key.SectorOwnerData</var>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$SectorOwnerData</var>
+		</line>
+		<line linenr="365" indent="" />
+		<line linenr="366" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="367" indent="" />
+		<line linenr="368" indent="" />
+		<line linenr="369" indent="" />
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="al.Revelation.DoGlblArrays" />
+			<sval type="int" val="50" />
+			<sval type="string" val="LitQB's Revelation: Sets race ships array" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="38">
+				<sval type="string" val="Key.RaceShips" />
+				<sval type="string" val="Key.SectorOwnerData" />
+				<sval type="string" val="MaxRaces" />
+				<sval type="string" val="RaceArgon" />
+				<sval type="string" val="RaceBoron" />
+				<sval type="string" val="RaceSplit" />
+				<sval type="string" val="RaceParanid" />
+				<sval type="string" val="RaceTeladi" />
+				<sval type="string" val="TL" />
+				<sval type="string" val="TS" />
+				<sval type="string" val="M4" />
+				<sval type="string" val="M5" />
+				<sval type="string" val="M3" />
+				<sval type="string" val="M6" />
+				<sval type="string" val="M7" />
+				<sval type="string" val="M8" />
+				<sval type="string" val="M1" />
+				<sval type="string" val="M2" />
+				<sval type="string" val="TLShipCount" />
+				<sval type="string" val="TSShipCount" />
+				<sval type="string" val="M4ShipCount" />
+				<sval type="string" val="M5ShipCount" />
+				<sval type="string" val="M3ShipCount" />
+				<sval type="string" val="M6ShipCount" />
+				<sval type="string" val="M7ShipCount" />
+				<sval type="string" val="M8ShipCount" />
+				<sval type="string" val="M1ShipCount" />
+				<sval type="string" val="M2ShipCount" />
+				<sval type="string" val="ArrayCountDown" />
+				<sval type="string" val="TempArray" />
+				<sval type="string" val="RaceShips" />
+				<sval type="string" val="Sectors" />
+				<sval type="string" val="SectorCount" />
+				<sval type="string" val="SectorOwnerData" />
+				<sval type="string" val="SectorOwnerData.Sectors" />
+				<sval type="string" val="SectorOwnerData.Owners" />
+				<sval type="string" val="SectorCurrent" />
+				<sval type="string" val="Owner" />
+			</sval>
+			<sval type="array" size="286">
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="LitQB.RaceShips" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="LitQB.SectorOwnerData" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="6" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="7" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="18" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="19" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="6" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="20" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="6" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="21" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="22" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="23" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="24" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="25" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="26" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="27" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610603767" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="18" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="30" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610602231" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="19" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="36" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610600695" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="20" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="42" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610599159" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="21" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="48" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610597623" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="22" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="54" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610596087" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="23" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="60" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610594551" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="24" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="66" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610593015" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="25" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="72" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610591479" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="26" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="78" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610589943" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="27" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="84" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459252" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459277" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459278" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459465" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459331" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459218" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459235" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459233" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459430" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459450" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459218" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459270" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459270" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459270" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459301" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459301" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459301" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459281" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459350" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459365" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459374" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459377" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459431" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459341" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459366" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459366" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459341" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459454" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459373" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459272" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459349" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459392" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459372" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459349" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459272" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459258" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459229" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459228" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459258" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459229" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459228" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459405" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459227" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459405" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459227" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459405" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459227" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459360" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459359" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459363" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459362" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459360" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459359" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459219" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459219" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459219" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459219" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459219" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459219" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459352" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459352" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459352" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459347" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459347" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459347" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459255" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459255" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459255" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459255" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459256" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459408" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459408" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459408" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459300" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459299" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459357" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459357" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459357" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459357" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459357" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459220" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459220" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459220" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459220" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459220" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459231" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459231" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459231" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459231" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459384" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459251" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459251" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459251" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459232" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459232" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459406" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459406" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459406" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459406" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459406" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459355" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459354" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459292" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459368" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459368" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459457" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459457" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459457" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459457" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459457" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459223" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459223" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459223" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459224" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459224" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459211" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459226" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459259" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459211" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459279" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459407" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459385" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459385" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459385" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459451" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459451" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459451" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459391" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459391" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459391" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459295" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459217" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459266" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459295" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459295" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459285" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459285" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459311" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459308" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459438" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459286" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459307" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459297" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459308" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459434" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459284" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459284" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459284" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459221" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459221" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459221" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459334" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459334" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459348" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459306" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459313" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459380" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459222" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459208" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459239" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459289" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459303" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459298" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459467" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459467" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459257" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459469" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459296" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1082" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459296" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="30" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="1334" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="31" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9999" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="32" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="33" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="34" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="35" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610540535" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="32" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="32" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="36" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="32" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="701" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="36" />
+					<sval type="int" val="37" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="34" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="36" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="35" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="37" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="275" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="33" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="34" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="33" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="35" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+			<sval type="array" size="94">
+				<sval type="array" size="2">
+					<sval type="int" val="2" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="19" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="19" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Number of different types of ships per race" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="29" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="35" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="35" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="41" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="41" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="47" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="47" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="53" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="53" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="59" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="59" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="65" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="65" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="71" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="71" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="77" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="77" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="83" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="83" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="89" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="89" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="89" />
+					<sval type="int" val="1" />
+					<sval type="string" val="TL" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="94" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="94" />
+					<sval type="int" val="1" />
+					<sval type="string" val="TS" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="100" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="106" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="118" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="124" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="124" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="130" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="136" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="142" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="148" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="154" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="154" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="159" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="164" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="169" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="174" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="179" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="179" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M3" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="184" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="189" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="194" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="199" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="204" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="204" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M6" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="207" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="210" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="213" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="216" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="219" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="219" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M8" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="224" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="224" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M7" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="229" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="234" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="237" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="240" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="243" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="243" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="243" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="248" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="248" />
+					<sval type="int" val="1" />
+					<sval type="string" val="M2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="250" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="252" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="254" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="256" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="258" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="258" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="259" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="269" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="270" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="270" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="270" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="270" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="275" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="275" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="275" />
+					<sval type="int" val="1" />
+					<sval type="string" val="0 Array of sectors" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="275" />
+					<sval type="int" val="1" />
+					<sval type="string" val="1 Array of Owners, matching sector indexes" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="275" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="282" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="282" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="284" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="285" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="286" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="286" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="286" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

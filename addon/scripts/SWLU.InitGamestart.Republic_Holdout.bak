@@ -1,0 +1,274 @@
+display subtitle text: text='Gamestart initialization: Republic Holdout' duration=5000 ms
+
+$PlayerSector = [PLAYERSHIP]-> get sector
+
+* Default ranks
+set fight rank= 5800
+set trade rank= 5800
+
+* Creates the player`s personal ship
+$PersonalShip = create ship: type={Rebel Pelta Raider} owner=[Player] addto=$PlayerSector x=3320 y=43800 z=30500
+* $PersonalShip =create ship: type={Rebel Corellian Corvette} owner=[Player] addto=$PlayerSector x=-99600 y=-6820 z=-50600
+= $PersonalShip-> install 7975 units of {Cargo Bay Extension}
+= $PersonalShip-> install 14 units of {Engine Tuning}
+= $PersonalShip-> install 10 units of {Rudder Optimisation}
+= $PersonalShip-> install 4 units of {1 GJ Shield}
+= $PersonalShip-> install 6 units of {Fusion Beam Cannon}
+= $PersonalShip-> install 2 units of {Ion Disruptor}
+= $PersonalShip-> install 4 units of {Ion Pulse Generator}
+= $PersonalShip-> install 4 units of {Ion Disruptor}
+= $PersonalShip-> install 4 units of {Ion Pulse Generator}
+= $PersonalShip-> install 2 units of {Ion Disruptor}
+= $PersonalShip-> install 2 units of {Ion Cannon}
+= $PersonalShip-> install 1 units of {Video Enhancement Goggles}
+= $PersonalShip-> install 1 units of {Duplex Scanner}
+= $PersonalShip-> install 1 units of {Navigation Command Software MK1}
+= $PersonalShip-> install 1 units of {Trade Command Software MK1}
+= $PersonalShip-> install 1 units of {Trade Command Software MK2}
+= $PersonalShip-> install 1 units of {Trading System Extension}
+= $PersonalShip-> install 1 units of {Special Command Software MK1}
+= $PersonalShip-> install 1 units of {Transporter Device}
+= $PersonalShip-> install 1 units of {Remote System Control Software}
+= $PersonalShip-> install 1 units of {Docking Computer}
+= $PersonalShip-> install 1 units of {Docking Transporter Extension}
+= $PersonalShip-> install 1 units of {Bioscanner}
+= $PersonalShip-> install 1 units of {Cargo Lifesupport System}
+= $PersonalShip-> install 1 units of {CCDS MK1}
+= $PersonalShip-> install 1 units of {Carrier Command Software}
+= $PersonalShip-> install 50 units of {Banshee Missile}
+= $PersonalShip-> install 100 units of {Chaff}
+= $PersonalShip-> install 1000 units of {Energy Cells}
+$PersonalShip-> set jumpdrive fuel resupply: amount=150
+START $PersonalShip-> command [COMMAND_TURRET_KILL_ENEMIES] : arg1=$null, arg2=null, arg3=null, arg4=null
+= move player to ship $PersonalShip: Teleport=[FALSE]
+
+$PersonalShip-> set formation 6
+
+* Creates the player`s Equipment Dock
+$PlayerED = create station: type={Republic Space Equipment Dock} owner=[Player] addto=$PlayerSector x=143 y=50900 z=30500
+$PlayerED-> set name to 'Central Equipment Outpost'
+= $PlayerED-> install 12 units of {2 GJ Shield}
+$MaxED = $PlayerED-> get maximum shield strength
+$PlayerED-> set current shield strength to $MaxED
+$PlayerED-> add product to factory or dock: {Energy Cells}
+= $PlayerED-> install 5000 units of {Energy Cells}
+$PlayerED-> set max trade jumps: 25
+$PlayerED-> set invincible: invincible= [TRUE]
+
+* Spawns advanced satellite
+= create ship: type={Neutral Race Advanced Satellite} owner=[Player] addto=$PlayerSector x=0 y=50000 z=0
+* = create ship: type={Neutral Race Advanced Satellite} owner=[Player] addto=[Akeela`s Beacon] x=0 y=5500 z=0
+
+* Creates 5 elite fighters for the player ship
+for $Variable = 0 to 4 step 1
+ $PersonalFighter = create ship: type={Pirate ARC-170 Prototype} owner=[Player] addto=$PlayerED x=0 y=0 z=0
+ = $PersonalFighter-> install 400 units of {Cargo Bay Extension}
+ = $PersonalFighter-> install 30 units of {Engine Tuning}
+ = $PersonalFighter-> install 4 units of {Rudder Optimisation}
+ = $PersonalFighter-> install 2 units of {200 MJ Shield}
+ = $PersonalFighter-> install 8 units of {Ion Disruptor}
+ = $PersonalFighter-> install 4 units of {Energy Bolt Chaingun}
+ = $PersonalFighter-> install 1 units of {Video Enhancement Goggles}
+ = $PersonalFighter-> install 1 units of {Duplex Scanner}
+ = $PersonalFighter-> install 1 units of {Navigation Command Software MK1}
+ = $PersonalFighter-> install 1 units of {Trade Command Software MK1}
+ = $PersonalFighter-> install 1 units of {Trade Command Software MK2}
+ = $PersonalFighter-> install 1 units of {Trading System Extension}
+ = $PersonalFighter-> install 1 units of {Special Command Software MK1}
+ = $PersonalFighter-> install 1 units of {Transporter Device}
+ = $PersonalFighter-> install 1 units of {Bioscanner}
+ = $PersonalFighter-> install 1 units of {CCDS MK1}
+ = $PersonalFighter-> install 20 units of {Chaff}
+ = $PersonalFighter-> install 10 units of {Wasp Missile}
+ = $PersonalFighter-> install 10 units of {Tornado Missile}
+ $PersonalFighter-> set jumpdrive fuel resupply: amount=50
+ $PersonalFighter-> set homebase to $PersonalShip
+ START $PersonalFighter-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=[PLAYERSHIP], arg2=[FALSE], arg3=null, arg4=null
+end
+
+* Creates the player`s overpowered crystal mine
+* $CrystalMine = create station: type={Republic Silicon Mine L} owner=[Player] addto=$PlayerSector x=4000 y=32900 z=30500
+* $CrystalMine-> set name to `Crystal Mine`
+* = $CrystalMine-> install 10 units of {2 GJ Shield}
+* $CMaxED = $CrystalMine-> get maximum shield strength
+* $CrystalMine-> set current shield strength to $CMaxED
+* $CrystalMine-> add default wares to station/dock
+* $CrystalMine-> add product to factory or dock: {1 MJ Shield}
+* $CrystalMine-> add product to factory or dock: {5 MJ Shield}
+* $CrystalMine-> add product to factory or dock: {25 MJ Shield}
+* $CrystalMine-> add product to factory or dock: {200 MJ Shield}
+* $CrystalMine-> remove product from factory or dock: {Silicon Wafers}
+* $CrystalMine-> remove primary resource from factory: {Energy Cells}
+* $CrystalMine-> set max trade jumps: 25
+* $CrystalMine-> factory production task: on=1
+
+= wait 150000 ms
+
+* Spawns 16 Y-Wings to escort the player
+for $Variable = 0 to 15 step 1
+ $t = create ship: type={Republic Y-Wing BTL-B} owner=[Player] addto=$PlayerED x=0 y=0 z=0
+ $t-> set homebase to $PlayerED
+ = $t-> install 480 units of {Cargo Bay Extension}
+ = $t-> install 23 units of {Engine Tuning}
+ = $t-> install 4 units of {Rudder Optimisation}
+ = $t-> install 6 units of {Ion Disruptor}
+ = $t-> install 4 units of {25 MJ Shield}
+ = $t-> install 50 units of {Hammerhead Missile}
+ = $t-> install 10 units of {Tornado Missile}
+ $t-> set fire missile probability to 75
+ START $t-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=[PLAYERSHIP], arg2=[FALSE], arg3=null, arg4=null
+end
+
+* Spawns 16 Z-95 AF-4s to escort the player
+for $Variable = 0 to 15 step 1
+ $t = create ship: type={Republic Z-95 AF-4} owner=[Player] addto=$PlayerED x=0 y=0 z=0
+ $t-> set homebase to $PlayerED
+ = $t-> install 50 units of {Cargo Bay Extension}
+ = $t-> install 14 units of {Engine Tuning}
+ = $t-> install 4 units of {Rudder Optimisation}
+ = $t-> install 4 units of {Ion Disruptor}
+ = $t-> install 3 units of {25 MJ Shield}
+ = $t-> install 30 units of {Silkworm Missile}
+ $t-> set fire missile probability to 50
+ START $t-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=[PLAYERSHIP], arg2=[FALSE], arg3=null, arg4=null
+end
+
+* Gives the player a small orbital weapons platform
+$Owp = create ship: type={Neutral Race Small Orbital Weapons Platform} owner=[Player] addto=$PlayerSector x=-2000 y=45900 z=31500
+= $Owp-> install 4 units of {2 GJ Shield}
+= $Owp-> install 16 units of {Ion Pulse Generator}
+
+* Creates three player-owned Consular Corvettes
+for $Variable = 0 to 2 step 1
+ $t = create ship: type={Republic Consular Corvette} owner=[Player] addto=$PlayerED x=0 y=0 z=0
+ = $t-> install 650 units of {Cargo Bay Extension}
+ = $t-> install 20 units of {Engine Tuning}
+ = $t-> install 10 units of {Rudder Optimisation}
+ = $t-> install 5 units of {200 MJ Shield}
+ = $t-> install 8 units of {Ion Pulse Generator}
+ = $t-> install 10 units of {Ion Disruptor}
+ = $t-> install 1 units of {Video Enhancement Goggles}
+ = $t-> install 1 units of {Duplex Scanner}
+ = $t-> install 1 units of {Navigation Command Software MK1}
+ = $t-> install 1 units of {Trading System Extension}
+ = $t-> install 1 units of {Special Command Software MK1}
+ = $t-> install 1 units of {CCDS MK1}
+ = $t-> install 50 units of {Chaff}
+ = $t-> install 30 units of {Silkworm Missile}
+ $t-> set jumpdrive fuel resupply: amount=50
+ $t-> set autojump active: 1
+ $t-> set emergency jump active: 50
+ $t-> set fire missile probability to 65
+ START $t-> command [COMMAND_TURRET_KILL_ENEMIES] : arg1=$null, arg2=null, arg3=null, arg4=null
+ START $t-> call script '!ship.cmd.protect.std' : target=[PLAYERSHIP] stopifleaderdocked=[TRUE]
+end
+
+* Creates 3 G-9 Riggers for the plaer
+for $Variable = 0 to 1 step 1
+ $t = create ship: type={Friendly Race G9 Rigger} owner=[Player] addto=$PlayerED x=0 y=0 z=0
+ = $t-> install 1800 units of {Cargo Bay Extension}
+ = $t-> install 8 units of {Engine Tuning}
+ = $t-> install 8 units of {Rudder Optimisation}
+ = $t-> install 4 units of {25 MJ Shield}
+ = $t-> install 4 units of {Energy Bolt Chaingun}
+ = $t-> install 1 units of {Video Enhancement Goggles}
+ = $t-> install 1 units of {Duplex Scanner}
+ = $t-> install 1 units of {Navigation Command Software MK1}
+ = $t-> install 1 units of {Trading System Extension}
+ = $t-> install 1 units of {Special Command Software MK1}
+ $t-> set homebase to $PlayerED
+ $t-> set jumpdrive fuel resupply: amount=50
+ $t-> set autojump active: 1
+end
+
+
+* Creates a CIS fleet to harass the Republic Enclave
+$Carrier = create ship: type={CIS Providence Dreadnought} owner=[CIS] addto=$PlayerSector x=-50000 y=-10000 z=-10000
+$Carrier-> show effect: effect= 46
+$Carrier-> add default items to ship
+START $Carrier-> call script '!fight.defend.sector' : target=$PlayerSector
+for $VariableA = 0 to 47 step 1
+ $x = create ship: type={CIS Droid Tri-Fighter} owner=[CIS] addto=$Carrier x=0 y=0 z=0
+ $x-> set fire missile probability to 75
+ $x-> add default items to ship
+ START $x-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$Carrier, arg2=[FALSE], arg3=null, arg4=null
+end
+* Creates three Munifcents as escort
+for $VariableA = 0 to 2 step 1
+ $t = create ship: type={CIS Munificent Frigate} owner=[CIS] addto=$PlayerSector x=-50000 y=-10000 z=-10000
+ $t-> show effect: effect= 46
+ $t-> add default items to ship
+ START $t-> call script '!fight.defend.sector' : target=$PlayerSector
+end
+
+
+$AidCounter = 0
+
+
+= wait 1800000 ms
+
+while $AidCounter < 10
+ 
+ display subtitle text: text='Credits and additional fighters provided by the Republic' duration=5000 ms
+ add money to player: 300000000
+  play sample 0
+ 
+ * Spawns 16 Y-Wings to escort the player
+ for $Variable = 0 to 15 step 1
+  $t = create ship: type={Republic Y-Wing BTL-B} owner=[Player] addto=$PlayerED x=0 y=0 z=0
+  $t-> set homebase to $PlayerED
+  = $t-> install 480 units of {Cargo Bay Extension}
+  = $t-> install 23 units of {Engine Tuning}
+  = $t-> install 4 units of {Rudder Optimisation}
+  = $t-> install 6 units of {Ion Disruptor}
+  = $t-> install 4 units of {25 MJ Shield}
+  = $t-> install 50 units of {Hammerhead Missile}
+  = $t-> install 10 units of {Tornado Missile}
+  $t-> set fire missile probability to 75
+  START $t-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=[PLAYERSHIP], arg2=[FALSE], arg3=null, arg4=null
+ end
+ 
+ * Spawns 16 Z-95 AF-4s to escort the player
+ for $Variable = 0 to 15 step 1
+  $t = create ship: type={Republic Z-95 AF-4} owner=[Player] addto=$PlayerED x=0 y=0 z=0
+  $t-> set homebase to $PlayerED
+  = $t-> install 50 units of {Cargo Bay Extension}
+  = $t-> install 14 units of {Engine Tuning}
+  = $t-> install 4 units of {Rudder Optimisation}
+  = $t-> install 4 units of {Ion Disruptor}
+  = $t-> install 3 units of {25 MJ Shield}
+  = $t-> install 30 units of {Silkworm Missile}
+  $t-> set fire missile probability to 50
+  START $t-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=[PLAYERSHIP], arg2=[FALSE], arg3=null, arg4=null
+ end
+ 
+ $AidCounter = $AidCounter + 1
+ 
+ = wait 1800000 ms
+ 
+end
+
+
+
+
+* Spawns a small patrol of imperials to attack the OWP
+* $tar = create ship: type={Imperial Tartan Patrol Cruiser} owner=[Imperial] addto=[New Income] x=0 y=0 z=0
+* = $tar-> install 1500 units of {Cargo Bay Extension}
+* = $tar-> install 25 units of {Engine Tuning}
+* = $tar-> install 2 units of {Rudder Optimisation}
+* = $tar-> install 40 units of {Electro-Magnetic Plasma Cannon}
+* = $tar-> install 4 units of {200 MJ Shield}
+* START $tar-> command [COMMAND_ATTACK] : arg1=$Owp, arg2=[FALSE], arg3=null, arg4=null
+
+* for $Variable = 0 to 25 step 1
+* $v = create ship: type={Imperial TIE Fighter} owner=[Imperial] addto=[Homily of Perpetuity] x=0 y=0 z=0
+* = $v-> install 20 units of {Cargo Bay Extension}
+* = $v-> install 25 units of {Engine Tuning}
+* = $v-> install 2 units of {Rudder Optimisation}
+* = $v-> install 4 units of {Alpha Particle Cannon}
+* = $v-> install 3 units of {5 MJ Shield}
+* START $v-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$tar, arg2=[FALSE], arg3=null, arg4=null
+* ** START $t-> call script `!fight.attack.object` : victim=$Owp follow=[FALSE] onlyShields=[FALSE]
+* end
+
+return null

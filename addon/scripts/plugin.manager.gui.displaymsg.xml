@@ -1,0 +1,89 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.manager.gui.displaymsg</name>
+<version>100</version>
+<engineversion>42</engineversion>
+<description>Plugin Manager: Display a message window</description>
+<arguments>
+<argument index="1" name="header" type="Var/String" desc="Header Text" />
+<argument index="2" name="text" type="Var/String" desc="Description" />
+<argument index="3" name="height" type="Var/Number" desc="Window Height" />
+<argument index="4" name="timeout" type="Var/Number" desc="Timeout (ms)" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$s&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'MESSAGE:%s:%s:%s:%s'</var><text>,&#160;</text><var>$timeout</var><text>,&#160;</text><var>$height</var><text>,&#160;</text><var>$header</var><text>,&#160;</text><var>$text</var><text>,&#160;</text><var>null</var></line>
+<line linenr="002" indent=""><text>write&#160;to&#160;log&#160;file&#160;#</text><var>9005</var><text>&#160;&#160;append=</text><var>[TRUE]</var><text>&#160;&#160;value=</text><var>$s</var></line>
+<line linenr="003" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.manager.gui.displaymsg"/>
+  <sval type="int" val="42"/>
+  <sval type="string" val="Plugin Manager: Display a message window"/>
+  <sval type="int" val="100"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="5">
+    <sval type="string" val="header"/>
+    <sval type="string" val="text"/>
+    <sval type="string" val="height"/>
+    <sval type="string" val="timeout"/>
+    <sval type="string" val="s"/>
+  </sval>
+  <sval type="array" size="3">
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="MESSAGE:%s:%s:%s:%s"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="404"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="9005"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="array" size="4">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Header Text"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Description"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="string" val="Window Height"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="string" val="Timeout (ms)"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

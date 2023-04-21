@@ -1,0 +1,294 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.manager.g15.setcustom</name>
+<version>120</version>
+<engineversion>44</engineversion>
+<description>Logitech G15: Set custom stats</description>
+<arguments>
+<argument index="1" name="id" type="Var/String" desc="Identifier" />
+<argument index="2" name="string" type="Var/String" desc="string" />
+<argument index="3" name="expire" type="Var/Number" desc="Expire Time" />
+</arguments>
+<sourcetext>
+<line linenr="001" interruptable="@" indent=""><var>$string&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>lib.cycrow.removecolour</call><text>&#160;:&#160;</text><text>&#160;String=</text><var>$string</var></line>
+<line linenr="002" indent=""></line>
+<line linenr="003" indent=""><var>$time&#160;=&#160;</var><text>playing&#160;time</text></line>
+<line linenr="004" indent=""><var>skip&#160;if&#160;</var><var>$expire</var><text>&#160;</text><var>==</var><text>&#160;</text><var>0</var></line>
+<line linenr="005" indent="&#160;"><var>$expire&#160;=&#160;</var><var>$expire</var><text>&#160;</text><var>+</var><text>&#160;</text><var>$time</var></line>
+<line linenr="006" indent=""></line>
+<line linenr="007" indent=""><var>$custom&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'pluginmanager.g15.custom'</var></line>
+<line linenr="008" indent=""><var>$count&#160;=&#160;</var><text>&#160;size&#160;of&#160;array&#160;</text><var>$custom</var></line>
+<line linenr="009" indent=""><var>while&#160;</var><var>$count</var></line>
+<line linenr="010" indent="&#160;"><text>dec&#160;</text><var>$count&#160;=&#160;</var></line>
+<line linenr="011" indent="&#160;"><var>$check.id&#160;=&#160;</var><var>$custom</var><text>[</text><var>$count</var><text>][</text><var>0</var><text>]</text></line>
+<line linenr="012" indent="&#160;"><var>if&#160;</var><var>$check.id</var><text>&#160;</text><var>==</var><text>&#160;</text><var>$id</var></line>
+<line linenr="013" indent="&#160;&#160;"><var>$custom</var><text>[</text><var>$count</var><text>][</text><var>1</var><text>]&#160;=&#160;</text><var>$string</var></line>
+<line linenr="014" indent="&#160;&#160;"><var>$custom</var><text>[</text><var>$count</var><text>][</text><var>2</var><text>]&#160;=&#160;</text><var>$expire</var></line>
+<line linenr="015" indent="&#160;&#160;"><text>return&#160;</text><var>null</var></line>
+<line linenr="016" indent="&#160;"><text>end</text></line>
+<line linenr="017" indent=""><text>end</text></line>
+<line linenr="018" indent=""></line>
+<line linenr="019" indent=""><var>skip&#160;if&#160;</var><var>$custom</var></line>
+<line linenr="020" indent="&#160;"><var>$custom&#160;=&#160;</var><text>&#160;array&#160;alloc:&#160;size=</text><var>0</var></line>
+<line linenr="021" indent=""><var>$new&#160;=&#160;</var><text>&#160;array&#160;alloc:&#160;size=</text><var>3</var></line>
+<line linenr="022" indent=""><var>$new</var><text>[</text><var>0</var><text>]&#160;=&#160;</text><var>$id</var></line>
+<line linenr="023" indent=""><var>$new</var><text>[</text><var>1</var><text>]&#160;=&#160;</text><var>$string</var></line>
+<line linenr="024" indent=""><var>$new</var><text>[</text><var>2</var><text>]&#160;=&#160;</text><var>$expire</var></line>
+<line linenr="025" indent=""><text>append&#160;</text><var>$new</var><text>&#160;to&#160;array&#160;</text><var>$custom</var></line>
+<line linenr="026" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'pluginmanager.g15.custom'</var><text>&#160;value=</text><var>$custom</var></line>
+<line linenr="027" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.manager.g15.setcustom"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Logitech G15: Set custom stats"/>
+  <sval type="int" val="120"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="8">
+    <sval type="string" val="id"/>
+    <sval type="string" val="string"/>
+    <sval type="string" val="expire"/>
+    <sval type="string" val="time"/>
+    <sval type="string" val="custom"/>
+    <sval type="string" val="count"/>
+    <sval type="string" val="check.id"/>
+    <sval type="string" val="new"/>
+  </sval>
+  <sval type="array" size="23">
+    <sval type="array" size="8">
+      <sval type="int" val="102"/>
+      <sval type="string" val="lib.cycrow.removecolour"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="141"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-536869881"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="pluginmanager.g15.custom"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="131"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609143"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="143"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="1081"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609405"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="9">
+      <sval type="int" val="1082"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="9">
+      <sval type="int" val="1082"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-536866809"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="128"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="128"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="130"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="130"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="130"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="pluginmanager.g15.custom"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="array" size="3">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Identifier"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="string"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="string" val="Expire Time"/>
+    </sval>
+  </sval>
+  <sval type="array" size="5">
+    <sval type="array" size="2">
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="14"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="14"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

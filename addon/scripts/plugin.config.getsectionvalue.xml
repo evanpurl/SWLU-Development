@@ -1,0 +1,243 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.config.getsectionvalue</name>
+<version>1</version>
+<engineversion>44</engineversion>
+<description>Comunity Configuration: Returns the setting value of an option</description>
+<arguments>
+<argument index="1" name="a.id" type="Var/String" desc="Unique ID" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><comment><text>*&#160;</text><var>Community&#160;Plugin&#160;Configuration</var></comment></line>
+<line linenr="002" indent=""><comment><text>*&#160;</text><var>===================================</var></comment></line>
+<line linenr="003" indent=""><comment><text>*&#160;</text><var>returns&#160;a&#160;settings&#160;value&#160;for&#160;a&#160;given&#160;option</var></comment></line>
+<line linenr="004" indent=""><comment><text>*&#160;</text><var>===================================</var></comment></line>
+<line linenr="005" indent=""><comment><text>*&#160;</text><var>Author:&#160;Cycrow</var></comment></line>
+<line linenr="006" indent=""><comment><text>*&#160;</text><var>Updated:&#160;03-06-2009</var></comment></line>
+<line linenr="007" indent=""><comment><text>*&#160;</text><var>===================================</var></comment></line>
+<line linenr="008" indent=""></line>
+<line linenr="009" indent=""><comment><text>*&#160;</text><var>check&#160;we&#160;have&#160;anything&#160;valid</var></comment></line>
+<line linenr="010" indent=""><var>$aOptions&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'config.custsections'</var></line>
+<line linenr="011" indent=""><var>skip&#160;if&#160;</var><var>$aOptions</var></line>
+<line linenr="012" indent="&#160;"><text>return&#160;</text><var>null</var></line>
+<line linenr="013" indent=""><var>skip&#160;if&#160;</var><text>&#160;size&#160;of&#160;array&#160;</text><var>$aOptions</var></line>
+<line linenr="014" indent="&#160;"><text>return&#160;</text><var>null</var></line>
+<line linenr="015" indent=""></line>
+<line linenr="016" indent=""><comment><text>*&#160;</text><var>find&#160;the&#160;matching&#160;ID</var></comment></line>
+<line linenr="017" indent=""><var>$count&#160;=&#160;</var><text>&#160;size&#160;of&#160;array&#160;</text><var>$aOptions</var></line>
+<line linenr="018" indent=""><var>while&#160;</var><var>$count</var></line>
+<line linenr="019" indent="&#160;"><text>dec&#160;</text><var>$count&#160;=&#160;</var></line>
+<line linenr="020" indent="&#160;"><var>$a&#160;=&#160;</var><var>$aOptions</var><text>[</text><var>$count</var><text>]</text></line>
+<line linenr="021" indent="&#160;"><var>$id&#160;=&#160;</var><var>$aOptions</var><text>[</text><var>$count</var><text>][</text><var>0</var><text>]</text></line>
+<line linenr="022" indent="&#160;"><var>if&#160;</var><var>$id</var><text>&#160;</text><var>==</var><text>&#160;</text><var>$a.id</var></line>
+<line linenr="023" indent="&#160;&#160;"><var>$value&#160;=&#160;</var><var>$aOptions</var><text>[</text><var>$count</var><text>][</text><var>4</var><text>]</text></line>
+<line linenr="024" indent="&#160;&#160;"><text>return&#160;</text><var>$value</var></line>
+<line linenr="025" indent="&#160;"><text>end</text></line>
+<line linenr="026" indent=""><text>end</text></line>
+<line linenr="027" indent=""></line>
+<line linenr="028" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.config.getsectionvalue"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Comunity Configuration: Returns the setting value of an option"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="6">
+    <sval type="string" val="a.id"/>
+    <sval type="string" val="aOptions"/>
+    <sval type="string" val="count"/>
+    <sval type="string" val="a"/>
+    <sval type="string" val="id"/>
+    <sval type="string" val="value"/>
+  </sval>
+  <sval type="array" size="15">
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.custsections"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-536870137"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="131"/>
+      <sval type="int" val="-536869625"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="131"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609143"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="143"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="129"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="1081"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609405"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="1081"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="array" size="1">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Unique ID"/>
+    </sval>
+  </sval>
+  <sval type="array" size="14">
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Community Plugin Configuration"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="==================================="/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="returns a settings value for a given option"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="==================================="/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Author: Cycrow"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Updated: 03-06-2009"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="==================================="/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="0"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="check we have anything valid"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="5"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="5"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="find the matching ID"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="14"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="14"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

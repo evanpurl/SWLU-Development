@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>Cheat.MaxRank</name>
+<version>1</version>
+<engineversion>54</engineversion>
+<description></description>
+<arguments>
+</arguments>
+<sourceplaintext>
+<![CDATA[
+  set fight rank=1000000
+  set trade rank=1000000
+  
+  return null
+]]>
+</sourceplaintext>
+<sourcetext>
+<line indent=""><text>set&#160;fight&#160;rank=</text><var>1000000</var></line>
+<line indent=""><text>set&#160;trade&#160;rank=</text><var>1000000</var></line>
+<line indent=""></line>
+<line indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="Cheat.MaxRank"/>
+  <sval type="int" val="54"/>
+  <sval type="string" val=""/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="3">
+    <sval type="array" size="3">
+      <sval type="int" val="1800"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1000000"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="1801"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1000000"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="array" size="1">
+    <sval type="array" size="2">
+      <sval type="int" val="2"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+<nosignature>4793</nosignature>
+</script>

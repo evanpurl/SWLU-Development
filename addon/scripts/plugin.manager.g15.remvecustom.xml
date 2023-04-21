@@ -1,0 +1,131 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.manager.g15.remvecustom</name>
+<version>100</version>
+<engineversion>42</engineversion>
+<description>Logitech G15: Remove custom stats</description>
+<arguments>
+<argument index="1" name="id" type="Var/String" desc="Identifier" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$custom&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'pluginmanager.g15.custom'</var></line>
+<line linenr="002" indent=""><var>$count&#160;=&#160;</var><text>&#160;size&#160;of&#160;array&#160;</text><var>$custom</var></line>
+<line linenr="003" indent=""><var>while&#160;</var><var>$count</var></line>
+<line linenr="004" indent="&#160;"><text>dec&#160;</text><var>$count&#160;=&#160;</var></line>
+<line linenr="005" indent="&#160;"><var>$check.id&#160;=&#160;</var><var>$custom</var><text>[</text><var>$count</var><text>][</text><var>0</var><text>]</text></line>
+<line linenr="006" indent="&#160;"><var>if&#160;</var><var>$check.id</var><text>&#160;</text><var>==</var><text>&#160;</text><var>$id</var></line>
+<line linenr="007" indent="&#160;&#160;"><text>remove&#160;element&#160;from&#160;array&#160;</text><var>$custom</var><text>&#160;at&#160;index&#160;</text><var>$count</var></line>
+<line linenr="008" indent="&#160;&#160;"><text>return&#160;</text><var>[TRUE]</var></line>
+<line linenr="009" indent="&#160;"><text>end</text></line>
+<line linenr="010" indent=""><text>end</text></line>
+<line linenr="011" indent=""><text>return&#160;</text><var>[FALSE]</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.manager.g15.remvecustom"/>
+  <sval type="int" val="42"/>
+  <sval type="string" val="Logitech G15: Remove custom stats"/>
+  <sval type="int" val="100"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="4">
+    <sval type="string" val="id"/>
+    <sval type="string" val="custom"/>
+    <sval type="string" val="count"/>
+    <sval type="string" val="check.id"/>
+  </sval>
+  <sval type="array" size="10">
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="pluginmanager.g15.custom"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="131"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610610423"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="143"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="1081"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610610685"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="136"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+  </sval>
+  <sval type="array" size="1">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Identifier"/>
+    </sval>
+  </sval>
+  <sval type="array" size="2">
+    <sval type="array" size="2">
+      <sval type="int" val="8"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="9"/>
+      <sval type="int" val="4"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

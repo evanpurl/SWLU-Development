@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language id="44">
+  <page id="8378" title="UI Colour" descr="Malachite">    
+	<t id="1">1776411</t><!--Sector unrevealed-->    
+	<t id="2">2565927</t><!--Sector revealed-->    
+	<t id="3">2565927</t><!--Trade Window-->
+	<t id="4">124159</t><!--Heading and Title Colour-->    
+  	<t id="5">01E4FF</t><!--Heading and Title Colour Hex-->
+  </page>
+</language>

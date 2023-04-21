@@ -1,0 +1,1741 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>SWLU.SpawnRebelFleet_Big</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments />
+	<sourcetext>
+		<line linenr="001" indent="">
+			<text>display</text>
+			<text> </text>
+			<text>subtitle</text>
+			<text> </text>
+			<text>text</text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text>'&lt;SWLU&gt;: Spawning Rebel Fleet....'</text>
+			<text> </text>
+			<text>duration</text>
+			<text>=</text>
+			<var>5000</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="002" indent="" />
+		<line linenr="003" indent="">
+			<var>$PlayerSector</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>sector</text>
+		</line>
+		<line linenr="004" indent="">
+			<var>$PlayerX</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>x</text>
+			<text> </text>
+			<text>position</text>
+		</line>
+		<line linenr="005" indent="">
+			<var>$PlayerY</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>y</text>
+			<text> </text>
+			<text>position</text>
+		</line>
+		<line linenr="006" indent="">
+			<var>$PlayerZ</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>z</text>
+			<text> </text>
+			<text>position</text>
+		</line>
+		<line linenr="007" indent="" />
+		<line linenr="008" indent="">
+			<var>$OffsetZ</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$PlayerZ</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>20000</var>
+		</line>
+		<line linenr="009" indent="" />
+		<line linenr="010" indent="">
+			<comment>* Creates a MC-80I Carrier for the Rebels</comment>
+		</line>
+		<line linenr="011" indent="">
+			<var>$Carrier</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Rebel MC80 Independence}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Rebel]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$PlayerSector</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>$PlayerX</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>$PlayerY</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>$OffsetZ</var>
+		</line>
+		<line linenr="012" indent="">
+			<var>$Carrier</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>show</text>
+			<text> </text>
+			<text>effect</text>
+			<text>:</text>
+			<text> </text>
+			<text>effect</text>
+			<text>=</text>
+			<text> </text>
+			<var>46</var>
+		</line>
+		<line linenr="013" indent="">
+			<var>$Carrier</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<text>default</text>
+			<text> </text>
+			<text>items</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>ship</text>
+		</line>
+		<line linenr="014" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>$Carrier</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>!fight.defend.sector</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>target</text>
+			<text>=</text>
+			<var>$PlayerSector</var>
+		</line>
+		<line linenr="015" indent="">
+			<var>$VariableA</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="016" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$VariableA</var>
+			<text> </text>
+			<text>&lt;</text>
+			<text> </text>
+			<var>47</var>
+		</line>
+		<line linenr="017" indent="&#160;">
+			<var>$VariableA</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$VariableA</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="018" indent="&#160;">
+			<var>$x</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Rebel X-Wing R}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Rebel]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$Carrier</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="019" indent="&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>$x</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>25</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Tomahawk Heavy Missile}</var>
+		</line>
+		<line linenr="020" indent="&#160;">
+			<var>$x</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>fire</text>
+			<text> </text>
+			<text>missile</text>
+			<text> </text>
+			<text>probability</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>75</var>
+		</line>
+		<line linenr="021" indent="">
+			<var>$x</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<text>default</text>
+			<text> </text>
+			<text>items</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>ship</text>
+		</line>
+		<line linenr="022" indent="">
+			<text>START</text>
+			<text> </text>
+			<var>$x</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>command</text>
+			<text> </text>
+			<var>[COMMAND_ESCORT_ATTACK_NEAREST]</var>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>arg1</text>
+			<text>=</text>
+			<var>$Carrier</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg2</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg3</text>
+			<text>=</text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg4</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="023" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="024" indent="" />
+		<line linenr="025" indent="" />
+		<line linenr="026" indent="&#160;">
+			<comment>* Creates three MC80 Liberties with escorts (increase this loop iteration with extreme caution!)</comment>
+		</line>
+		<line linenr="027" indent="&#160;">
+			<var>$VariableA</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="028" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$VariableA</var>
+			<text> </text>
+			<text>&lt;</text>
+			<text> </text>
+			<var>2</var>
+		</line>
+		<line linenr="029" indent="&#160;">
+			<var>$VariableA</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$VariableA</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="030" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Rebel MC80 Liberty}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Rebel]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$PlayerSector</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>$PlayerX</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>$PlayerY</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>$OffsetZ</var>
+		</line>
+		<line linenr="031" indent="&#160;">
+			<var>$t</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>show</text>
+			<text> </text>
+			<text>effect</text>
+			<text>:</text>
+			<text> </text>
+			<text>effect</text>
+			<text>=</text>
+			<text> </text>
+			<var>46</var>
+		</line>
+		<line linenr="032" indent="&#160;&#160;">
+			<var>$t</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<text>default</text>
+			<text> </text>
+			<text>items</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>ship</text>
+		</line>
+		<line linenr="033" indent="&#160;&#160;" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>$t</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>!fight.defend.sector</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>target</text>
+			<text>=</text>
+			<var>$PlayerSector</var>
+		</line>
+		<line linenr="034" indent="&#160;&#160;" />
+		<line linenr="035" indent="&#160;&#160;">
+			<var>$VariableB</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="036" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$VariableB</var>
+			<text> </text>
+			<text>&lt;</text>
+			<text> </text>
+			<var>4</var>
+		</line>
+		<line linenr="037" indent="&#160;">
+			<var>$VariableB</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$VariableB</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="038" indent="&#160;">
+			<var>$v</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Rebel Corellian Corvette}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Rebel]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$PlayerSector</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>$PlayerX</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>$PlayerY</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>$OffsetZ</var>
+		</line>
+		<line linenr="039" indent="&#160;&#160;">
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>show</text>
+			<text> </text>
+			<text>effect</text>
+			<text>:</text>
+			<text> </text>
+			<text>effect</text>
+			<text>=</text>
+			<text> </text>
+			<var>46</var>
+		</line>
+		<line linenr="040" indent="&#160;&#160;">
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<text>default</text>
+			<text> </text>
+			<text>items</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>ship</text>
+		</line>
+		<line linenr="041" indent="&#160;&#160;">
+			<text>START</text>
+			<text> </text>
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>command</text>
+			<text> </text>
+			<var>[COMMAND_ESCORT_ATTACK_NEAREST]</var>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>arg1</text>
+			<text>=</text>
+			<var>$t</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg2</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg3</text>
+			<text>=</text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg4</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="042" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="043" indent="&#160;" />
+		<line linenr="044" indent="&#160;">
+			<var>$VariableB</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="045" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$VariableB</var>
+			<text> </text>
+			<text>&lt;</text>
+			<text> </text>
+			<var>2</var>
+		</line>
+		<line linenr="046" indent="&#160;&#160;">
+			<var>$VariableB</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$VariableB</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="047" indent="&#160;&#160;">
+			<var>$v</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Rebel Corellian Gunship}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Rebel]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$PlayerSector</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>$PlayerX</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>$PlayerY</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>$OffsetZ</var>
+		</line>
+		<line linenr="048" indent="&#160;&#160;">
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>show</text>
+			<text> </text>
+			<text>effect</text>
+			<text>:</text>
+			<text> </text>
+			<text>effect</text>
+			<text>=</text>
+			<text> </text>
+			<var>46</var>
+		</line>
+		<line linenr="049" indent="&#160;&#160;">
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<text>default</text>
+			<text> </text>
+			<text>items</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>ship</text>
+		</line>
+		<line linenr="050" indent="&#160;&#160;">
+			<text>START</text>
+			<text> </text>
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>command</text>
+			<text> </text>
+			<var>[COMMAND_ESCORT_ATTACK_NEAREST]</var>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>arg1</text>
+			<text>=</text>
+			<var>$t</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg2</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg3</text>
+			<text>=</text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg4</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="051" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="052" indent="&#160;&#160;&#160;" />
+		<line linenr="053" indent="&#160;&#160;&#160;">
+			<var>$VariableB</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="054" indent="&#160;&#160;&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$VariableB</var>
+			<text> </text>
+			<text>&lt;</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="055" indent="&#160;&#160;&#160;">
+			<var>$VariableB</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$VariableB</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="056" indent="&#160;&#160;&#160;">
+			<var>$v</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Rebel Nebulon-B Frigate}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Rebel]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$PlayerSector</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>$PlayerX</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>$PlayerY</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>$OffsetZ</var>
+		</line>
+		<line linenr="057" indent="&#160;&#160;">
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>show</text>
+			<text> </text>
+			<text>effect</text>
+			<text>:</text>
+			<text> </text>
+			<text>effect</text>
+			<text>=</text>
+			<text> </text>
+			<var>46</var>
+		</line>
+		<line linenr="058" indent="&#160;">
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<text>default</text>
+			<text> </text>
+			<text>items</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>ship</text>
+		</line>
+		<line linenr="059" indent="">
+			<text>START</text>
+			<text> </text>
+			<var>$v</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>command</text>
+			<text> </text>
+			<var>[COMMAND_ESCORT_ATTACK_NEAREST]</var>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>arg1</text>
+			<text>=</text>
+			<var>$t</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg2</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg3</text>
+			<text>=</text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg4</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="060" indent="" />
+		<line linenr="061" indent="">
+			<var>$VariableC</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="062" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$VariableC</var>
+			<text> </text>
+			<text>&lt;</text>
+			<text> </text>
+			<var>5</var>
+		</line>
+		<line linenr="063" indent="">
+			<var>$VariableC</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$VariableC</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="064" indent="">
+			<var>$y</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Rebel Y-Wing Bomber}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Rebel]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$v</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="065" indent="">
+			<text>=</text>
+			<text> </text>
+			<var>$y</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>25</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Tomahawk Heavy Missile}</var>
+		</line>
+		<line linenr="066" indent="">
+			<var>$y</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>fire</text>
+			<text> </text>
+			<text>missile</text>
+			<text> </text>
+			<text>probability</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>75</var>
+		</line>
+		<line linenr="067" indent="">
+			<var>$y</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<text>default</text>
+			<text> </text>
+			<text>items</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>ship</text>
+		</line>
+		<line linenr="068" indent="">
+			<text>START</text>
+			<text> </text>
+			<var>$y</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>command</text>
+			<text> </text>
+			<var>[COMMAND_ESCORT_ATTACK_NEAREST]</var>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>arg1</text>
+			<text>=</text>
+			<var>$v</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg2</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg3</text>
+			<text>=</text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<text>arg4</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="069" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="070" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="071" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="072" indent="" />
+		<line linenr="073" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="SWLU.SpawnRebelFleet_Big" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="2" />
+			<sval type="array" size="13">
+				<sval type="string" val="PlayerSector" />
+				<sval type="string" val="PlayerX" />
+				<sval type="string" val="PlayerY" />
+				<sval type="string" val="PlayerZ" />
+				<sval type="string" val="OffsetZ" />
+				<sval type="string" val="Carrier" />
+				<sval type="string" val="VariableA" />
+				<sval type="string" val="x" />
+				<sval type="string" val="t" />
+				<sval type="string" val="VariableB" />
+				<sval type="string" val="v" />
+				<sval type="string" val="VariableC" />
+				<sval type="string" val="y" />
+			</sval>
+			<sval type="array" size="61">
+				<sval type="array" size="5">
+					<sval type="int" val="1418" />
+					<sval type="int" val="5" />
+					<sval type="string" val="&lt;SWLU&gt;: Spawning Rebel Fleet...." />
+					<sval type="int" val="4" />
+					<sval type="int" val="5000" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="703" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="740" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="741" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="742" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="20000" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="5" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459289" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1899" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="645" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="!fight.defend.sector" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="6" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607863" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="47" />
+					<sval type="int" val="15" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="6" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="7" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459228" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="25" />
+					<sval type="int" val="9" />
+					<sval type="int" val="655389" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="551" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="4" />
+					<sval type="int" val="75" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="645" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="514" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="6" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610597367" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="15" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="6" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="8" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459239" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1899" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="645" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="!fight.defend.sector" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604023" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459211" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1899" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="645" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="514" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="27" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610601975" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="15" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459259" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1899" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="645" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="514" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="35" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610597623" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459285" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1899" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="645" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="514" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610597879" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="15" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="12" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459251" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="25" />
+					<sval type="int" val="9" />
+					<sval type="int" val="655389" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="551" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="4" />
+					<sval type="int" val="75" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="645" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="514" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="18" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="50" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="43" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="20" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+			<sval type="array" size="18">
+				<sval type="array" size="2">
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="5" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="6" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="6" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Creates a MC-80I Carrier for the Rebels" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="19" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="19" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="19" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="19" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Creates three MC80 Liberties with escorts (increase this loop iteration with extreme caution!)" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="26" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="42" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="42" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="49" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="58" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="59" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="60" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="60" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

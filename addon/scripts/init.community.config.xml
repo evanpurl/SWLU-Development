@@ -1,0 +1,232 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>init.community.config</name>
+<version>1</version>
+<engineversion>44</engineversion>
+<description>Community Configuration: Initialisation</description>
+<arguments>
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><comment><text>*&#160;</text><var>whipe&#160;all&#160;settings&#160;at&#160;begining</var></comment></line>
+<line linenr="002" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'config.scripts'</var><text>&#160;value=</text><var>null</var></line>
+<line linenr="003" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'config.menus'</var><text>&#160;value=</text><var>null</var></line>
+<line linenr="004" indent=""><var>$aOptions&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'config.options'</var></line>
+<line linenr="005" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'config.backup.opt'</var><text>&#160;value=</text><var>$aOptions</var></line>
+<line linenr="006" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'config.options'</var><text>&#160;value=</text><var>null</var></line>
+<line linenr="007" indent=""><var>$page.id&#160;=&#160;</var><var>7000</var></line>
+<line linenr="008" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'pageid.config'</var><text>&#160;value=</text><var>$page.id</var></line>
+<line linenr="009" indent=""><text>load&#160;text:&#160;id=</text><var>$page.id</var></line>
+<line linenr="010" indent=""></line>
+<line linenr="011" indent=""><var>$text&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$page.id</var><text>&#160;id=</text><var>1</var></line>
+<line linenr="012" interruptable="@" indent=""><var>if&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.hotkeymanager.add</call><text>&#160;:&#160;</text><text>&#160;Hotkey&#160;Name&#160;ID=</text><var>'config'</var><text>&#160;</text><text>&#160;Display&#160;Text=</text><var>$text</var><text>&#160;</text><text>&#160;Hotkey&#160;Script=</text><var>'plugin.config.menu'</var></line>
+<line linenr="013" indent="&#160;"><var>$key&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'config.key'</var></line>
+<line linenr="014" indent="&#160;"><var>if&#160;</var><var>$key</var></line>
+<line linenr="015" indent="&#160;&#160;"><text>unregister&#160;hotkey&#160;</text><var>$key</var></line>
+<line linenr="016" indent="&#160;&#160;"><text>set&#160;global&#160;variable:&#160;name=</text><var>'config.key'</var><text>&#160;value=</text><var>null</var></line>
+<line linenr="017" indent="&#160;"><text>end</text></line>
+<line linenr="018" indent="&#160;"></line>
+<line linenr="019" indent=""><text>else</text></line>
+<line linenr="020" indent="&#160;"><var>$key&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'config.key'</var></line>
+<line linenr="021" indent="&#160;"><var>if&#160;not&#160;</var><var>$key</var></line>
+<line linenr="022" indent="&#160;&#160;"><var>$key&#160;=&#160;</var><text>&#160;register&#160;hotkey&#160;</text><var>$text</var><text>&#160;to&#160;call&#160;script&#160;</text><call>plugin.config.menu</call></line>
+<line linenr="023" indent="&#160;&#160;"><text>set&#160;global&#160;variable:&#160;name=</text><var>'config.key'</var><text>&#160;value=</text><var>$key</var></line>
+<line linenr="024" indent="&#160;"><text>end</text></line>
+<line linenr="025" indent=""><text>end</text></line>
+<line linenr="026" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="init.community.config"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Community Configuration: Initialisation"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="4">
+    <sval type="string" val="aOptions"/>
+    <sval type="string" val="page.id"/>
+    <sval type="string" val="text"/>
+    <sval type="string" val="key"/>
+  </sval>
+  <sval type="array" size="20">
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.scripts"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.menus"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.options"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.backup.opt"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.options"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="7000"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="pageid.config"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="151"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="12">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.hotkeymanager.add"/>
+      <sval type="int" val="-1610608893"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="plugin.config.menu"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.key"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609149"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="1101"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.key"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="19"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.key"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-536866044"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="1100"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="string" val="plugin.config.menu"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.key"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="array" size="7">
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="whipe all settings at begining"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="8"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="14"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="14"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="15"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="19"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="19"/>
+      <sval type="int" val="4"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<language id="44">
+<page id="351506" title="Turbo Booster" descr="">
+ <t id="1">Enable Turbo Booster</t>
+ <t id="2">Your ship doesn't have the correct device to enable turbo, requires \033R%s\033X</t>
+ <t id="3">The turbo booster is still charging, Current Level=\033R%s%\033X; must be above 15%</t>
+ <t id="4">Not enought energy available to engage turbo booster</t>
+ <t id="5">Engaging Turbo Booster, Using: \033G%s\033X</t>
+ <t id="6">Shield Energy</t>
+ <t id="7">\033RWARNING\033X Turbo Booster disengaged, not enough energy remaining</t>
+ <t id="8">\033G%s%\033X</t>
+ <t id="9">\033R%s%\033X</t>
+ <t id="10">Turbo Booster running: \033R%s\033X Energy Left: %s</t>
+ <t id="11">\033RWARNING\033X Turbo Booster disengaged, requires cool down</t>
+ <t id="12">Turbo Booster deactivated</t>
+ <t id="13">\033GUnlimited\033X \(Spaceflies\)</t>
+ <t id="14">\033R%s\033X Cells, \033R%s\033X Shield, \033R%s\033X Laser</t>
+ <t id="15">Turbo Booster Configuration</t>
+ <t id="16">Energy Types to Use</t>
+ <t id="17">Usage Thresholds</t>
+ <t id="18">Energy Priorities</t>
+ <t id="19">Use: %s</t>
+ <t id="20">Shield Energy</t>
+ <t id="21">Laser Energy</t>
+ <t id="22">\033G%s\033X</t>
+ <t id="23">\033R%s\033X</t>
+ <t id="24">Move Up</t>
+ <t id="25">Move Down</t>
+ <t id="26">Adjust priority position</t>
+</page>
+<page id="350017" title="Boardcomp. objects" descr="">
+ <t id="5863">Turbo Booster \(Small\)</t>
+ <t id="5864">The Turbo Booster \(Small\) allows your smaller ships to travel at faster speeds while it's engaged. It requires energy cells to keep it running.</t>
+ <t id="5903">Turbo Booster \(Large\)</t>
+ <t id="5904">The Turbo Booster \(Large\) allows your capital class ship to travel at faster speeds while it's engaged. It requires energy cells to keep it running.</t>
+</page>
+</language>

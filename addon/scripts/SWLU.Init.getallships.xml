@@ -1,0 +1,572 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>SWLU.Init.getallships</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="plugin.id" type="Var/String" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="">
+			<comment>* ************************************************</comment>
+		</line>
+		<line linenr="002" indent="">
+			<comment>* SCRIPT NAME: SWLU.Init.getallships.xml</comment>
+		</line>
+		<line linenr="003" indent="">
+			<comment>* DESCRIPTION: </comment>
+		</line>
+		<line linenr="004" indent="">
+			<comment>* </comment>
+		</line>
+		<line linenr="005" indent="">
+			<comment>* AUTHOR: Purls          DATE: 13 July 2022</comment>
+		</line>
+		<line linenr="006" indent="">
+			<comment>* ************************************************</comment>
+		</line>
+		<line linenr="007" indent="" />
+		<line linenr="008" indent="">
+			<var>$Races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>new</text>
+			<text> </text>
+			<text>array</text>
+			<text>,</text>
+			<text> </text>
+			<text>arguments</text>
+			<text>=</text>
+			<text> </text>
+			<var>[Rebel]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[New Republic (Races)]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[Mandalorian]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[CIS]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[Republic]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[Remnant]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[Imperial]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[Pirates]</var>
+			<text>,</text>
+			<text> </text>
+			<var>[Old Republic (Races)]</var>
+		</line>
+		<line linenr="009" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>[Jedi]</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$Races</var>
+		</line>
+		<line linenr="010" indent="">
+			<var>$MaxRaces</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$Races</var>
+		</line>
+		<line linenr="011" indent="">
+			<var>$mr</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MaxRaces</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="012" indent="">
+			<var>$Rnum</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$Rnum</var>
+			<text> </text>
+			<text>&lt;</text>
+			<text> </text>
+			<var>$mr</var>
+		</line>
+		<line linenr="014" indent="&#160;">
+			<var>$Rnum</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Rnum</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="015" indent="&#160;">
+			<var>$Race</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Races</var>
+			<text>[</text>
+			<var>$Rnum</var>
+			<text>]</text>
+		</line>
+		<line linenr="016" indent="&#160;">
+			<var>$Temp</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>ship</text>
+			<text> </text>
+			<text>type</text>
+			<text> </text>
+			<text>array</text>
+			<text>:</text>
+			<text> </text>
+			<text>maker</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>$Race</var>
+			<text> </text>
+			<text>class</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="017" indent="&#160;">
+			<var>$RShips</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$Temp</var>
+		</line>
+		<line linenr="018" indent="&#160;">
+			<comment>* $msg = 'Generated ' + $RShips + ' ships for race: ' + $Race</comment>
+		</line>
+		<line linenr="019" indent="&#160;">
+			<comment>* write to player logbook $msg</comment>
+		</line>
+		<line linenr="020" indent="&#160;&#160;">
+			<var>$ShipTypes</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="021" indent="&#160;">
+			<var>$Count</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$Temp</var>
+		</line>
+		<line linenr="022" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$Count</var>
+		</line>
+		<line linenr="023" indent="">
+			<text>dec</text>
+			<text> </text>
+			<var>$Count</var>
+		</line>
+		<line linenr="024" indent="">
+			<var>$ShipType</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Temp</var>
+			<text>[</text>
+			<var>$Count</var>
+			<text>]</text>
+		</line>
+		<line linenr="025" indent="">
+			<text>append</text>
+			<text> </text>
+			<var>$ShipType</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$ShipTypes</var>
+		</line>
+		<line linenr="026" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="027" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>SWLU.shipyards</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>Race</text>
+			<text>=</text>
+			<var>$Race</var>
+			<text> </text>
+			<text>shiparray</text>
+			<text>=</text>
+			<var>$ShipTypes</var>
+		</line>
+		<line linenr="028" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="029" indent="">
+			<text>write</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>player</text>
+			<text> </text>
+			<text>logbook</text>
+			<text> </text>
+			<text>'Dynamic Shipyards generated.'</text>
+		</line>
+		<line linenr="030" indent="" />
+		<line linenr="031" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="SWLU.Init.getallships" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="11">
+				<sval type="string" val="plugin.id" />
+				<sval type="string" val="Races" />
+				<sval type="string" val="MaxRaces" />
+				<sval type="string" val="mr" />
+				<sval type="string" val="Rnum" />
+				<sval type="string" val="Race" />
+				<sval type="string" val="Temp" />
+				<sval type="string" val="RShips" />
+				<sval type="string" val="ShipTypes" />
+				<sval type="string" val="ShipType" />
+				<sval type="string" val="Count" />
+			</sval>
+			<sval type="array" size="21">
+				<sval type="array" size="20">
+					<sval type="int" val="1829" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="2" />
+					<sval type="int" val="10" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+					<sval type="int" val="5" />
+					<sval type="int" val="10" />
+					<sval type="int" val="17" />
+					<sval type="int" val="10" />
+					<sval type="int" val="18" />
+					<sval type="int" val="10" />
+					<sval type="int" val="8" />
+					<sval type="int" val="10" />
+					<sval type="int" val="19" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607863" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="15" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1372" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608375" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="SWLU.shipyards" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="400" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Dynamic Shipyards generated." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="12">
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="************************************************" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="SCRIPT NAME: SWLU.Init.getallships.xml" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="DESCRIPTION: " />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="AUTHOR: Purls          DATE: 13 July 2022" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="************************************************" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="string" val="$msg = 'Generated ' + $RShips + ' ships for race: ' + $Race" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="string" val="write to player logbook $msg" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="17" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="19" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="20" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

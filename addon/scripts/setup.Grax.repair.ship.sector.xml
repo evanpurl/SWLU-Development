@@ -1,0 +1,148 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>setup.Grax.repair.ship.sector</name>
+	<version>1</version>
+	<engineversion>44</engineversion>
+	<description>Adds Repair command to Special menu</description>
+	<arguments />
+	<sourcetext>
+		<line linenr="001" indent="">
+			<text>load</text>
+			<text> </text>
+			<text>text</text>
+			<text>:</text>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>3441</var>
+		</line>
+		<line linenr="002" indent="">
+			<text>add</text>
+			<text> </text>
+			<text>ship</text>
+			<text> </text>
+			<text>custom</text>
+			<text> </text>
+			<text>command</text>
+			<text>:</text>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>531</var>
+		</line>
+		<line linenr="003" indent="">
+			<text>set</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<text>command</text>
+			<text> </text>
+			<text>upgrade</text>
+			<text>:</text>
+			<text> </text>
+			<text>command</text>
+			<text>=</text>
+			<var>[COMMAND_TYPE_SPECIAL_31]</var>
+			<text>  </text>
+			<text>upgrade</text>
+			<text>=</text>
+			<var>{Special Command Software MK1}</var>
+			<text>  </text>
+			<text>script</text>
+			<text>=</text>
+			<call>Grax.repair.a.ship.lasercheck</call>
+		</line>
+		<line linenr="004" indent="">
+			<text>global</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<text>map</text>
+			<text>:</text>
+			<text> </text>
+			<text>set</text>
+			<text>:</text>
+			<text> </text>
+			<text>key</text>
+			<text>=</text>
+			<var>[COMMAND_TYPE_SPECIAL_31]</var>
+			<text>,</text>
+			<text> </text>
+			<text>class</text>
+			<text>=</text>
+			<var>[Moveable Ship]</var>
+			<text>,</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>[Player]</var>
+			<text>,</text>
+			<text> </text>
+			<text>script</text>
+			<text>=</text>
+			<call>Grax.Repair.Ships.Sector</call>
+			<text>,</text>
+			<text> </text>
+			<text>prio</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="005" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="setup.Grax.repair.ship.sector" />
+			<sval type="int" val="44" />
+			<sval type="string" val="Adds Repair command to Special menu" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="int" val="0" />
+			<sval type="array" size="5">
+				<sval type="array" size="3">
+					<sval type="int" val="151" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3441" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="1463" />
+					<sval type="int" val="4" />
+					<sval type="int" val="531" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="154" />
+					<sval type="int" val="18" />
+					<sval type="int" val="531" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1048634" />
+					<sval type="string" val="Grax.repair.a.ship.lasercheck" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="118" />
+					<sval type="int" val="18" />
+					<sval type="int" val="531" />
+					<sval type="string" val="Grax.Repair.Ships.Sector" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2134" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+			<sval type="array" size="0" />
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

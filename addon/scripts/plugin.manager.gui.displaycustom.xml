@@ -1,0 +1,121 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.manager.gui.displaycustom</name>
+<version>100</version>
+<engineversion>42</engineversion>
+<description>Plugin Manager: Disply a custom display</description>
+<arguments>
+<argument index="1" name="filename" type="Var/String" desc="Custom Script Filename" />
+<argument index="2" name="varibles" type="Value" desc="Varibles" />
+<argument index="3" name="name" type="Var/String" desc="Gui Name" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""></line>
+<line linenr="002" indent=""></line>
+<line linenr="003" indent=""><var>$s&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'VARIBLES:%s'</var><text>,&#160;</text><var>$varibles</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="004" indent=""><text>write&#160;to&#160;log&#160;file&#160;#</text><var>9005</var><text>&#160;&#160;append=</text><var>[TRUE]</var><text>&#160;&#160;value=</text><var>$s</var></line>
+<line linenr="005" indent=""><var>$s&#160;=&#160;</var><text>sprintf:&#160;fmt=</text><var>'CUSTOM:%s:%s'</var><text>,&#160;</text><var>$name</var><text>,&#160;</text><var>$filename</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="006" indent=""><text>write&#160;to&#160;log&#160;file&#160;#</text><var>9005</var><text>&#160;&#160;append=</text><var>[TRUE]</var><text>&#160;&#160;value=</text><var>$s</var></line>
+<line linenr="007" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.manager.gui.displaycustom"/>
+  <sval type="int" val="42"/>
+  <sval type="string" val="Plugin Manager: Disply a custom display"/>
+  <sval type="int" val="100"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="4">
+    <sval type="string" val="filename"/>
+    <sval type="string" val="varibles"/>
+    <sval type="string" val="name"/>
+    <sval type="string" val="s"/>
+  </sval>
+  <sval type="array" size="5">
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="VARIBLES:%s"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="404"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="9005"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="14">
+      <sval type="int" val="149"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="CUSTOM:%s:%s"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="404"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="9005"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="array" size="3">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Custom Script Filename"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="9"/>
+      <sval type="string" val="Varibles"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Gui Name"/>
+    </sval>
+  </sval>
+  <sval type="array" size="2">
+    <sval type="array" size="2">
+      <sval type="int" val="0"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="0"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

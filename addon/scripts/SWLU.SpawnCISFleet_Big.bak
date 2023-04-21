@@ -1,0 +1,70 @@
+display subtitle text: text='<SWLU>: Spawning CIS Fleet....' duration=5000 ms
+
+$PlayerSector = [PLAYERSHIP]-> get sector
+$PlayerX = [PLAYERSHIP]-> get x position
+$PlayerY = [PLAYERSHIP]-> get y position
+$PlayerZ = [PLAYERSHIP]-> get z position
+
+$OffsetZ = $PlayerZ - 20000
+
+* Creates a Providence Dreadnought for the CIS
+$Carrier = create ship: type={CIS Providence Dreadnought} owner=[CIS] addto=$PlayerSector x=$PlayerX y=$PlayerY z=$OffsetZ
+$Carrier-> show effect: effect= 46
+$Carrier-> add default items to ship
+START $Carrier-> call script '!fight.defend.sector' : target=$PlayerSector
+for $VariableA = 0 to 47 step 1
+ $x = create ship: type={CIS Droid Tri-Fighter} owner=[CIS] addto=$Carrier x=0 y=0 z=0
+ *= $x-> install 25 units of {Tomahawk Heavy Missile}
+ $x-> set fire missile probability to 50
+ $x-> add default items to ship
+ START $x-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$Carrier, arg2=[FALSE], arg3=null, arg4=null
+end
+for $VariableA = 0 to 3 step 1
+ $x = create ship: type={CIS Munificent Frigate} owner=[CIS] addto=$PlayerSector x=$PlayerX y=$PlayerY z=$OffsetZ
+ $x -> add default items to ship
+ START $x-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$Carrier, arg2=[FALSE], arg3=null, arg4=null
+ for $VariableB = 0 to 1 step 1
+  $y = create ship: type={CIS Longhorn} owner=[CIS] addto=$PlayerSector x=$PlayerX y=$PlayerY z=$OffsetZ
+  $y -> add default items to ship
+ end
+end
+
+
+* Creates three MC80 Liberties with escorts (increase this loop iteration with extreme caution!)
+for $VariableA = 0 to 2 step 1
+ $t = create ship: type={Rebel MC80 Liberty} owner=[Rebel] addto=$PlayerSector x=$PlayerX y=$PlayerY z=$OffsetZ
+ $t-> show effect: effect= 46
+ $t-> add default items to ship
+ START $t-> call script '!fight.defend.sector' : target=$PlayerSector
+ 
+ for $VariableB = 0 to 4 step 1
+  $v = create ship: type={Rebel Corellian Corvette} owner=[Rebel] addto=$PlayerSector x=$PlayerX y=$PlayerY z=$OffsetZ
+  $v-> show effect: effect= 46
+  $v-> add default items to ship
+  START $v-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$t, arg2=[FALSE], arg3=null, arg4=null
+ end
+ 
+ for $VariableB = 0 to 2 step 1
+  $v = create ship: type={Rebel Corellian Gunship} owner=[Rebel] addto=$PlayerSector x=$PlayerX y=$PlayerY z=$OffsetZ
+  $v-> show effect: effect= 46
+  $v-> add default items to ship
+  START $v-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$t, arg2=[FALSE], arg3=null, arg4=null
+ end
+ 
+ for $VariableB = 0 to 1 step 1
+  $v = create ship: type={Rebel Nebulon-B Frigate} owner=[Rebel] addto=$PlayerSector x=$PlayerX y=$PlayerY z=$OffsetZ
+  $v-> show effect: effect= 46
+  $v-> add default items to ship
+  START $v-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$t, arg2=[FALSE], arg3=null, arg4=null
+  
+  for $VariableC = 0 to 5 step 1
+   $y = create ship: type={Rebel Y-Wing Bomber} owner=[Rebel] addto=$v x=0 y=0 z=0
+   = $y-> install 25 units of {Tomahawk Heavy Missile}
+   $y-> set fire missile probability to 75
+   $y-> add default items to ship
+   START $y-> command [COMMAND_ESCORT_ATTACK_NEAREST] : arg1=$v, arg2=[FALSE], arg3=null, arg4=null
+  end
+ end
+end
+
+return null

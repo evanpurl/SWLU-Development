@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>init.cycrow.keepstock</name>
+<version>1</version>
+<engineversion>43</engineversion>
+<description>Cycrow Library: Keepstock library</description>
+<arguments>
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$keepstock&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'keepstock'</var></line>
+<line linenr="002" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'keepstock.backup'</var><text>&#160;value=</text><var>$keepstock</var></line>
+<line linenr="003" indent=""><text>set&#160;global&#160;variable:&#160;name=</text><var>'keepstock'</var><text>&#160;value=</text><var>null</var></line>
+<line linenr="004" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="init.cycrow.keepstock"/>
+  <sval type="int" val="43"/>
+  <sval type="string" val="Cycrow Library: Keepstock library"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="1">
+    <sval type="string" val="keepstock"/>
+  </sval>
+  <sval type="array" size="4">
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="keepstock"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="keepstock.backup"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="keepstock"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="int" val="0"/>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

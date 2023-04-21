@@ -1,0 +1,31 @@
+display subtitle text: text='Gamestart initialization: Deluded Scoundrel' duration=5000 ms
+
+
+* Default ranks
+set trade rank= 1000
+
+* Spawns the three OWPs with treasure
+$T1 = create ship: type={Neutral Race Small Orbital Weapons Platform} owner=[Player] addto=[Far Point] x=615 y=38900 z=44900
+= $T1-> install 4 units of {2 GJ Shield}
+= $T1-> install 5 units of {Black Crystal}
+$MaxT1 = $T1-> get maximum shield strength
+$T1-> set current shield strength to $MaxT1
+
+$T2 = create ship: type={Neutral Race Small Orbital Weapons Platform} owner=[Player] addto=[Three Worlds] x=35900 y=-22600 z=27800
+= $T2-> install 4 units of {2 GJ Shield}
+= $T2-> install 5 units of {Black Crystal}
+$MaxT2 = $T2-> get maximum shield strength
+$T2-> set current shield strength to $MaxT2
+
+$T3 = create ship: type={Neutral Race Small Orbital Weapons Platform} owner=[Player] addto=[Getsu Fune] x=-54100 y=32300 z=-54600
+= $T3-> install 4 units of {2 GJ Shield}
+= $T3-> install 5 units of {Black Crystal}
+$MaxT3 = $T3-> get maximum shield strength
+$T3-> set current shield strength to $MaxT3
+
+* Sends the introductory message
+$Msg = sprintf: pageid=8387 textid=15, $PlayerName, null, null, null, null
+write to player logbook $Msg
+send incoming message $Msg to player: display it=[FALSE]
+
+return null

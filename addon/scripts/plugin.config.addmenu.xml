@@ -1,0 +1,325 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.config.addmenu</name>
+<version>5</version>
+<engineversion>44</engineversion>
+<description>Community Configuration: Add Menu</description>
+<arguments>
+<argument index="1" name="menuid" type="Var/String" desc="Unique Menu ID" />
+<argument index="2" name="name" type="Var/String" desc="Menu Name" />
+<argument index="3" name="author" type="Var/String" desc="Author" />
+<argument index="4" name="displayAuthor" type="Var/Boolean" desc="Display author" />
+<argument index="5" name="section" type="Var/String" desc="Add to section" />
+<argument index="6" name="a.menu" type="Var/String" desc="Add to Menu" />
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><comment><text>*&#160;</text><var>Adds&#160;a&#160;script&#160;to&#160;the&#160;config&#160;menu</var></comment></line>
+<line linenr="002" indent=""><comment><text>*&#160;</text><var>Author:&#160;Cycrow</var></comment></line>
+<line linenr="003" indent=""><comment><text>*&#160;</text><var>Updated:&#160;03-01-2010</var></comment></line>
+<line linenr="004" indent=""><comment><text>*&#160;</text><var>=============================</var></comment></line>
+<line linenr="005" indent=""><comment><text>*&#160;</text><var>V5:&#160;Fixed&#160;display&#160;author</var></comment></line>
+<line linenr="006" indent=""><comment><text>*&#160;</text><var>V4:&#160;Added&#160;Menu&#160;argument</var></comment></line>
+<line linenr="007" indent=""><comment><text>*&#160;</text><var>V2:&#160;Added&#160;Author&#160;display&#160;and&#160;section</var></comment></line>
+<line linenr="008" indent=""><comment><text>*&#160;</text><var>=============================</var></comment></line>
+<line linenr="009" indent=""></line>
+<line linenr="010" indent=""><var>$plugins&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'config.menus'</var></line>
+<line linenr="011" indent=""><var>if&#160;not&#160;</var><var>$plugins</var></line>
+<line linenr="012" indent="&#160;"><var>$plugins&#160;=&#160;</var><text>&#160;array&#160;alloc:&#160;size=</text><var>0</var></line>
+<line linenr="013" indent="&#160;"><text>set&#160;global&#160;variable:&#160;name=</text><var>'config.menus'</var><text>&#160;value=</text><var>$plugins</var></line>
+<line linenr="014" indent=""><text>end</text></line>
+<line linenr="015" indent=""></line>
+<line linenr="016" indent=""><var>$count&#160;=&#160;</var><text>&#160;size&#160;of&#160;array&#160;</text><var>$plugins</var></line>
+<line linenr="017" indent=""><var>while&#160;</var><var>$count</var></line>
+<line linenr="018" indent="&#160;"><text>dec&#160;</text><var>$count&#160;=&#160;</var></line>
+<line linenr="019" indent="&#160;"><var>$a&#160;=&#160;</var><var>$plugins</var><text>[</text><var>$count</var><text>]</text></line>
+<line linenr="020" indent="&#160;"><var>$chk.name&#160;=&#160;</var><var>$a</var><text>[</text><var>6</var><text>]</text></line>
+<line linenr="021" indent="&#160;"></line>
+<line linenr="022" indent="&#160;"><var>if&#160;</var><var>$chk.name</var><text>&#160;</text><var>==</var><text>&#160;</text><var>$menuid</var></line>
+<line linenr="023" indent="&#160;&#160;"><text>remove&#160;element&#160;from&#160;array&#160;</text><var>$plugins</var><text>&#160;at&#160;index&#160;</text><var>$count</var></line>
+<line linenr="024" indent="&#160;&#160;"><text>break</text></line>
+<line linenr="025" indent="&#160;"><text>end</text></line>
+<line linenr="026" indent=""><text>end</text></line>
+<line linenr="027" indent=""></line>
+<line linenr="028" indent=""><var>$a&#160;=&#160;</var><text>&#160;create&#160;new&#160;array,&#160;arguments=</text><var>$name</var><text>,&#160;</text><var>$author</var><text>,&#160;</text><var>'MENU'</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="029" indent=""><text>append&#160;</text><var>$displayAuthor</var><text>&#160;to&#160;array&#160;</text><var>$a</var></line>
+<line linenr="030" indent=""><text>append&#160;</text><var>$section</var><text>&#160;to&#160;array&#160;</text><var>$a</var></line>
+<line linenr="031" indent=""><text>append&#160;</text><var>$a.menu</var><text>&#160;to&#160;array&#160;</text><var>$a</var></line>
+<line linenr="032" indent=""><text>append&#160;</text><var>$menuid</var><text>&#160;to&#160;array&#160;</text><var>$a</var></line>
+<line linenr="033" indent=""><text>append&#160;</text><var>$a</var><text>&#160;to&#160;array&#160;</text><var>$plugins</var></line>
+<line linenr="034" indent=""><text>return&#160;</text><var>[TRUE]</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.config.addmenu"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Community Configuration: Add Menu"/>
+  <sval type="int" val="5"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="10">
+    <sval type="string" val="menuid"/>
+    <sval type="string" val="name"/>
+    <sval type="string" val="author"/>
+    <sval type="string" val="displayAuthor"/>
+    <sval type="string" val="section"/>
+    <sval type="string" val="a.menu"/>
+    <sval type="string" val="plugins"/>
+    <sval type="string" val="count"/>
+    <sval type="string" val="a"/>
+    <sval type="string" val="chk.name"/>
+  </sval>
+  <sval type="array" size="20">
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.menus"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-536869884"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="128"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="config.menus"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="131"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609399"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="143"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="129"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="129"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609661"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="136"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="13"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="12">
+      <sval type="int" val="1415"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="MENU"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+  </sval>
+  <sval type="array" size="6">
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Unique Menu ID"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Menu Name"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Author"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="63"/>
+      <sval type="string" val="Display author"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Add to section"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="11"/>
+      <sval type="string" val="Add to Menu"/>
+    </sval>
+  </sval>
+  <sval type="array" size="16">
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Adds a script to the config menu"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Author: Cycrow"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="Updated: 03-01-2010"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="============================="/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="V5: Fixed display author"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="V4: Added Menu argument"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="V2: Added Author display and section"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="============================="/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="0"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="9"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="12"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="12"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="13"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

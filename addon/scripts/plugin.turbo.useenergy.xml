@@ -1,0 +1,901 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.turbo.useenergy</name>
+<version>1</version>
+<engineversion>44</engineversion>
+<description>Afterburner: Use energy</description>
+<arguments>
+<argument index="1" name="Ship" type="Var/Ship" desc="Ship" />
+<argument index="2" name="a.start" type="Var/Boolean" desc="Starting?" />
+</arguments>
+<sourcetext>
+<line linenr="001" interruptable="@" indent=""><var>$v&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getsectionvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.prio'</var></line>
+<line linenr="002" indent=""><var>$max&#160;=&#160;</var><text>&#160;size&#160;of&#160;array&#160;</text><var>$v</var></line>
+<line linenr="003" indent=""><var>$i&#160;=&#160;</var><var>0</var></line>
+<line linenr="004" indent=""><var>while&#160;</var><var>$i</var><text>&#160;</text><var>&lt;</var><text>&#160;</text><var>$max</var></line>
+<line linenr="005" indent="&#160;"><var>$type&#160;=&#160;</var><var>$v</var><text>[</text><var>$i</var><text>]</text></line>
+<line linenr="006" indent="&#160;"></line>
+<line linenr="007" indent=""><comment><text>*&#160;</text><var>spaceflies</var></comment></line>
+<line linenr="008" indent="&#160;"><var>if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>1</var><text>&#160;</text><var>AND</var><text>&#160;</text><var>$a.start</var></line>
+<line linenr="009" indent=""><comment><text>*&#160;</text><var>only&#160;use&#160;spaceflies&#160;if&#160;its&#160;the&#160;start&#160;(should&#160;be&#160;skipped&#160;if&#160;not)</var></comment></line>
+<line linenr="010" interruptable="@" indent="&#160;&#160;"><var>if&#160;not&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.usefly'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[FALSE]</var></line>
+<line linenr="011" interruptable="@" indent="&#160;&#160;&#160;"><var>$threshold&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.flythresh'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[TRUE]</var></line>
+<line linenr="012" indent="&#160;&#160;&#160;"><var>$amt&#160;=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;get&#160;amount&#160;of&#160;ware&#160;</text><var>Spaceflies</var><text>&#160;in&#160;cargo&#160;bay</text></line>
+<line linenr="013" indent="&#160;&#160;&#160;"><var>if&#160;</var><var>$amt</var><text>&#160;</text><var>&gt;</var><text>&#160;</text><var>$threshold</var></line>
+<line linenr="014" indent="&#160;&#160;&#160;&#160;"><var>=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;add&#160;</text><var>-1</var><text>&#160;units&#160;of&#160;</text><var>Spaceflies</var></line>
+<line linenr="015" indent="&#160;&#160;&#160;&#160;"><var>$Ship&#160;-&gt;</var><text>&#160;set&#160;local&#160;variable:&#160;name=</text><var>'afterburn.spacefly'</var><text>&#160;value=</text><var>[TRUE]</var></line>
+<line linenr="016" indent="&#160;&#160;&#160;&#160;"><text>return&#160;</text><var>[TRUE]</var></line>
+<line linenr="017" indent="&#160;&#160;&#160;"><text>end</text></line>
+<line linenr="018" indent="&#160;&#160;"><text>end</text></line>
+<line linenr="019" indent="&#160;&#160;"></line>
+<line linenr="020" indent=""><comment><text>*&#160;</text><var>energy&#160;cells</var></comment></line>
+<line linenr="021" indent="&#160;"><var>else&#160;if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>2</var></line>
+<line linenr="022" interruptable="@" indent="&#160;&#160;"><var>if&#160;not&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.usenergy'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[FALSE]</var></line>
+<line linenr="023" interruptable="@" indent="&#160;&#160;&#160;"><var>$threshold&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.energythresh'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[TRUE]</var></line>
+<line linenr="024" indent="&#160;&#160;&#160;"><var>if&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;is&#160;of&#160;class&#160;</text><var>Huge&#160;Ship</var></line>
+<line linenr="025" indent="&#160;&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>5</var></line>
+<line linenr="026" indent="&#160;&#160;&#160;"><text>else</text></line>
+<line linenr="027" indent="&#160;&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>1</var></line>
+<line linenr="028" indent="&#160;&#160;&#160;"><text>end</text></line>
+<line linenr="029" indent="&#160;&#160;&#160;"><var>skip&#160;if&#160;not&#160;</var><var>$a.start</var></line>
+<line linenr="030" indent="&#160;&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>$Needed</var><text>&#160;</text><var>*</var><text>&#160;</text><var>3</var></line>
+<line linenr="031" indent="&#160;&#160;&#160;"><var>$amt&#160;=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;get&#160;amount&#160;of&#160;ware&#160;</text><var>Energy&#160;Cells</var><text>&#160;in&#160;cargo&#160;bay</text></line>
+<line linenr="032" indent="&#160;&#160;&#160;"><var>if&#160;</var><var>$amt</var><text>&#160;</text><var>&gt;</var><text>&#160;</text><var>(</var><text>&#160;</text><var>$Needed</var><text>&#160;</text><var>+</var><text>&#160;</text><var>$threshold</var><text>&#160;</text><var>)</var></line>
+<line linenr="033" indent="&#160;&#160;&#160;&#160;"><var>$Remove&#160;=&#160;</var><var>-</var><text>&#160;</text><var>$Needed</var></line>
+<line linenr="034" indent="&#160;&#160;&#160;&#160;"><var>=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;add&#160;</text><var>$Remove</var><text>&#160;units&#160;of&#160;</text><var>Energy&#160;Cells</var></line>
+<line linenr="035" indent="&#160;&#160;&#160;&#160;"><text>return&#160;</text><var>[TRUE]</var></line>
+<line linenr="036" indent="&#160;&#160;&#160;"><text>end</text></line>
+<line linenr="037" indent="&#160;&#160;"><text>end</text></line>
+<line linenr="038" indent="&#160;&#160;"></line>
+<line linenr="039" indent=""><comment><text>*&#160;</text><var>laser</var></comment></line>
+<line linenr="040" indent="&#160;"><var>else&#160;if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>3</var></line>
+<line linenr="041" interruptable="@" indent="&#160;&#160;"><var>if&#160;not&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.uselaser'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[FALSE]</var></line>
+<line linenr="042" interruptable="@" indent="&#160;&#160;&#160;"><var>$threshold&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.laserthresh'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[FALSE]</var></line>
+<line linenr="043" indent="&#160;&#160;&#160;"><var>$maxlaser&#160;=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;get&#160;maximum&#160;laser&#160;strength</text></line>
+<line linenr="044" indent="&#160;&#160;&#160;"><var>$threshold&#160;=&#160;</var><var>(</var><text>&#160;</text><var>$maxlaser</var><text>&#160;</text><var>*</var><text>&#160;</text><var>$threshold</var><text>&#160;</text><var>*</var><text>&#160;</text><var>5</var><text>&#160;</text><var>)</var><text>&#160;</text><var>/</var><text>&#160;</text><var>100</var></line>
+<line linenr="045" interruptable="@" indent="&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.turbo.getlaser</call><text>&#160;:&#160;</text><text>&#160;Ship=</text><var>$Ship</var></line>
+<line linenr="046" indent="&#160;&#160;&#160;"><var>if&#160;</var><var>$a.start</var></line>
+<line linenr="047" indent="&#160;&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>$Needed</var><text>&#160;</text><var>*</var><text>&#160;</text><var>5</var></line>
+<line linenr="048" indent="&#160;&#160;&#160;"><text>else</text></line>
+<line linenr="049" indent="&#160;&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>$Needed</var><text>&#160;</text><var>*</var><text>&#160;</text><var>2</var></line>
+<line linenr="050" indent="&#160;&#160;&#160;"><text>end</text></line>
+<line linenr="051" indent="&#160;&#160;&#160;"><var>$amt&#160;=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;get&#160;current&#160;laser&#160;strength</text></line>
+<line linenr="052" indent="&#160;&#160;&#160;"><var>if&#160;</var><var>$amt</var><text>&#160;</text><var>&gt;</var><text>&#160;</text><var>(</var><text>&#160;</text><var>$Needed</var><text>&#160;</text><var>+</var><text>&#160;</text><var>$threshold</var><text>&#160;</text><var>)</var></line>
+<line linenr="053" indent="&#160;&#160;&#160;&#160;"><var>$amt&#160;=&#160;</var><var>$amt</var><text>&#160;</text><var>-</var><text>&#160;</text><var>$Needed</var></line>
+<line linenr="054" indent="&#160;&#160;&#160;&#160;"><var>$Ship&#160;-&gt;</var><text>&#160;set&#160;laser&#160;energy&#160;to&#160;</text><var>$amt</var></line>
+<line linenr="055" indent="&#160;&#160;&#160;&#160;"><text>return&#160;</text><var>[TRUE]</var></line>
+<line linenr="056" indent="&#160;&#160;&#160;"><text>end</text></line>
+<line linenr="057" indent="&#160;&#160;"><text>end</text></line>
+<line linenr="058" indent="&#160;&#160;"></line>
+<line linenr="059" indent=""><comment><text>*&#160;</text><var>shield</var></comment></line>
+<line linenr="060" indent="&#160;"><var>else&#160;if&#160;</var><var>$type</var><text>&#160;</text><var>==</var><text>&#160;</text><var>4</var></line>
+<line linenr="061" interruptable="@" indent="&#160;&#160;"><var>if&#160;not&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.useshield'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[FALSE]</var></line>
+<line linenr="062" interruptable="@" indent="&#160;&#160;&#160;"><var>$threshold&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.config.getvalue</call><text>&#160;:&#160;</text><text>&#160;Unique&#160;ID=</text><var>'turbo.shieldthresh'</var><text>&#160;</text><text>&#160;Return&#160;Actual&#160;Value=</text><var>[FALSE]</var></line>
+<line linenr="063" indent="&#160;&#160;&#160;"><var>$maxlaser&#160;=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;get&#160;maximum&#160;shield&#160;strength</text></line>
+<line linenr="064" indent="&#160;&#160;&#160;"><var>$threshold&#160;=&#160;</var><var>(</var><text>&#160;</text><var>$maxlaser</var><text>&#160;</text><var>*</var><text>&#160;</text><var>$threshold</var><text>&#160;</text><var>*</var><text>&#160;</text><var>5</var><text>&#160;</text><var>)</var><text>&#160;</text><var>/</var><text>&#160;</text><var>100</var></line>
+<line linenr="065" interruptable="@" indent="&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>[THIS]&#160;-&gt;</var><text>&#160;call&#160;script&#160;</text><call>plugin.turbo.getshield</call><text>&#160;:&#160;</text><text>&#160;Ship=</text><var>$Ship</var></line>
+<line linenr="066" indent="&#160;&#160;&#160;"><var>skip&#160;if&#160;not&#160;</var><var>$a.start</var></line>
+<line linenr="067" indent="&#160;&#160;&#160;&#160;"><var>$Needed&#160;=&#160;</var><var>$Needed</var><text>&#160;</text><var>*</var><text>&#160;</text><var>3</var></line>
+<line linenr="068" indent="&#160;&#160;&#160;"><var>$amt&#160;=&#160;</var><var>$Ship&#160;-&gt;</var><text>&#160;get&#160;current&#160;shield&#160;strength</text></line>
+<line linenr="069" indent="&#160;&#160;&#160;"><var>if&#160;</var><var>$amt</var><text>&#160;</text><var>&gt;</var><text>&#160;</text><var>(</var><text>&#160;</text><var>$Needed</var><text>&#160;</text><var>+</var><text>&#160;</text><var>$threshold</var><text>&#160;</text><var>)</var></line>
+<line linenr="070" indent="&#160;&#160;&#160;&#160;"><var>$amt&#160;=&#160;</var><var>$amt</var><text>&#160;</text><var>-</var><text>&#160;</text><var>$Needed</var></line>
+<line linenr="071" indent="&#160;&#160;&#160;&#160;"><var>$Ship&#160;-&gt;</var><text>&#160;set&#160;current&#160;shield&#160;strength&#160;to&#160;</text><var>$amt</var></line>
+<line linenr="072" indent="&#160;&#160;&#160;&#160;"><text>return&#160;</text><var>[TRUE]</var></line>
+<line linenr="073" indent="&#160;&#160;&#160;"><text>end</text></line>
+<line linenr="074" indent="&#160;&#160;"><text>end</text></line>
+<line linenr="075" indent="&#160;"><text>end</text></line>
+<line linenr="076" indent="&#160;"></line>
+<line linenr="077" indent="&#160;"><text>inc&#160;</text><var>$i&#160;=&#160;</var></line>
+<line linenr="078" indent=""><text>end</text></line>
+<line linenr="079" indent=""></line>
+<line linenr="080" indent=""><text>return&#160;</text><var>[FALSE]</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.turbo.useenergy"/>
+  <sval type="int" val="44"/>
+  <sval type="string" val="Afterburner: Use energy"/>
+  <sval type="int" val="1"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="11">
+    <sval type="string" val="Ship"/>
+    <sval type="string" val="a.start"/>
+    <sval type="string" val="v"/>
+    <sval type="string" val="max"/>
+    <sval type="string" val="i"/>
+    <sval type="string" val="type"/>
+    <sval type="string" val="threshold"/>
+    <sval type="string" val="amt"/>
+    <sval type="string" val="Needed"/>
+    <sval type="string" val="Remove"/>
+    <sval type="string" val="maxlaser"/>
+  </sval>
+  <sval type="array" size="61">
+    <sval type="array" size="8">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getsectionvalue"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.prio"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="131"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610597367"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="129"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="19">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609149"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="-4"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="-536867580"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.usefly"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.flythresh"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="618"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="1048581"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610609405"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="646"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2147483647"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="1048581"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="155"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="afterburn.spacefly"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="58"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610605307"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="-536863740"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.usenergy"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.energythresh"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="705"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-1610607613"/>
+      <sval type="int" val="12"/>
+      <sval type="int" val="2019"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="21"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610606840"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="618"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="720896"/>
+    </sval>
+    <sval type="array" size="21">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610605565"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="16"/>
+      <sval type="int" val="-2"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="-3"/>
+      <sval type="int" val="17"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="104"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="65555"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="65555"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="646"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2147483647"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="720896"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="58"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610601211"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="-536859644"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.uselaser"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.laserthresh"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="717"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="27">
+      <sval type="int" val="104"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="100"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="14"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="16"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-2"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-4"/>
+      <sval type="int" val="17"/>
+      <sval type="int" val="14"/>
+      <sval type="int" val="-6"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.turbo.getlaser"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610603005"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="39"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="716"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="21">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610601469"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="16"/>
+      <sval type="int" val="-2"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="-3"/>
+      <sval type="int" val="17"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="12"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="12"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="1333"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="58"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610597883"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="-536856060"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.useshield"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+    <sval type="array" size="10">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.config.getvalue"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="turbo.shieldthresh"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="715"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="27">
+      <sval type="int" val="104"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="100"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="14"/>
+      <sval type="int" val="9"/>
+      <sval type="int" val="16"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-2"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-4"/>
+      <sval type="int" val="17"/>
+      <sval type="int" val="14"/>
+      <sval type="int" val="-6"/>
+    </sval>
+    <sval type="array" size="8">
+      <sval type="int" val="102"/>
+      <sval type="string" val="plugin.turbo.getshield"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610599160"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="714"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="21">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610597885"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="16"/>
+      <sval type="int" val="-2"/>
+      <sval type="int" val="11"/>
+      <sval type="int" val="-3"/>
+      <sval type="int" val="17"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="12"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="12"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="1048"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="142"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="9"/>
+    </sval>
+  </sval>
+  <sval type="array" size="2">
+    <sval type="array" size="2">
+      <sval type="int" val="21"/>
+      <sval type="string" val="Ship"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="63"/>
+      <sval type="string" val="Starting?"/>
+    </sval>
+  </sval>
+  <sval type="array" size="25">
+    <sval type="array" size="2">
+      <sval type="int" val="5"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="5"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="spaceflies"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="6"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="only use spaceflies if its the start (should be skipped if not)"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="13"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="13"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="13"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="energy cells"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="20"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="21"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="28"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="28"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="28"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="28"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="laser"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="38"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="39"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="44"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="44"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="44"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="44"/>
+      <sval type="int" val="1"/>
+      <sval type="string" val="shield"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="58"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="58"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="58"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="58"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="60"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="60"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

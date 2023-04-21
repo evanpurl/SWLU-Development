@@ -1,0 +1,288 @@
+<?xml version="1.0" standalone="yes" ?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl" ?>
+<script>
+<name>plugin.manager.gui.poll</name>
+<version>100</version>
+<engineversion>42</engineversion>
+<description>Plugin Manager: Poll the gui data</description>
+<arguments>
+</arguments>
+<sourcetext>
+<line linenr="001" indent=""><var>$page.id&#160;=&#160;</var><var>9006</var></line>
+<line linenr="002" indent=""><text>load&#160;text:&#160;id=</text><var>$page.id</var></line>
+<line linenr="003" indent=""></line>
+<line linenr="004" indent=""><var>$time&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$page.id</var><text>&#160;id=</text><var>1</var></line>
+<line linenr="005" indent=""><var>$time&#160;=&#160;</var><text>&#160;string&#160;</text><var>$time</var><text>&#160;to&#160;integer</text></line>
+<line linenr="006" indent=""><var>$count&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$page.id</var><text>&#160;id=</text><var>2</var></line>
+<line linenr="007" indent=""><var>$count&#160;=&#160;</var><text>&#160;string&#160;</text><var>$count</var><text>&#160;to&#160;integer</text></line>
+<line linenr="008" indent=""></line>
+<line linenr="009" indent=""><var>$results&#160;=&#160;</var><text>get&#160;global&#160;variable:&#160;name=</text><var>'plugman.gui'</var></line>
+<line linenr="010" indent=""><var>if&#160;not&#160;</var><var>$results</var></line>
+<line linenr="011" indent="&#160;"><var>$results&#160;=&#160;</var><text>&#160;array&#160;alloc:&#160;size=</text><var>0</var></line>
+<line linenr="012" indent="&#160;"><text>set&#160;global&#160;variable:&#160;name=</text><var>'plugman.gui'</var><text>&#160;value=</text><var>$results</var></line>
+<line linenr="013" indent=""><text>end</text></line>
+<line linenr="014" indent=""></line>
+<line linenr="015" indent=""><var>$num&#160;=&#160;</var><var>1</var></line>
+<line linenr="016" indent=""><var>while&#160;</var><var>$num</var><text>&#160;</text><var>&lt;=</var><text>&#160;</text><var>$count</var></line>
+<line linenr="017" indent="&#160;"><var>$v&#160;=&#160;</var><var>$num</var><text>&#160;</text><var>*</var><text>&#160;</text><var>10</var></line>
+<line linenr="018" indent="&#160;"><var>$gui&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$page.id</var><text>&#160;id=</text><var>$v</var></line>
+<line linenr="019" indent="&#160;"><text>inc&#160;</text><var>$v&#160;=&#160;</var></line>
+<line linenr="020" indent="&#160;"><var>$key&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$page.id</var><text>&#160;id=</text><var>$v</var></line>
+<line linenr="021" indent="&#160;"><text>inc&#160;</text><var>$v&#160;=&#160;</var></line>
+<line linenr="022" indent="&#160;"><var>$data&#160;=&#160;</var><text>&#160;read&#160;text:&#160;page=</text><var>$page.id</var><text>&#160;id=</text><var>$v</var></line>
+<line linenr="023" indent="&#160;"><text>append&#160;</text><var>$gui</var><text>&#160;to&#160;array&#160;</text><var>$results</var></line>
+<line linenr="024" indent="&#160;"><text>append&#160;</text><var>$key</var><text>&#160;to&#160;array&#160;</text><var>$results</var></line>
+<line linenr="025" indent="&#160;"><text>append&#160;</text><var>$data</var><text>&#160;to&#160;array&#160;</text><var>$results</var></line>
+<line linenr="026" indent="&#160;"><text>inc&#160;</text><var>$num&#160;=&#160;</var></line>
+<line linenr="027" indent=""><text>end</text></line>
+<line linenr="028" indent=""></line>
+<line linenr="029" indent=""><text>write&#160;to&#160;log&#160;file&#160;#</text><var>9005</var><text>&#160;&#160;append=</text><var>[TRUE]</var><text>&#160;&#160;printf:&#160;fmt=</text><var>'PURGE:%s'</var><text>,&#160;</text><var>$time</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var><text>,&#160;</text><var>null</var></line>
+<line linenr="030" indent=""><text>return&#160;</text><var>null</var></line>
+</sourcetext>
+<codearray>
+
+<sval type="array" size="10">
+  <sval type="string" val="plugin.manager.gui.poll"/>
+  <sval type="int" val="42"/>
+  <sval type="string" val="Plugin Manager: Poll the gui data"/>
+  <sval type="int" val="100"/>
+  <sval type="int" val="0"/>
+  <sval type="array" size="9">
+    <sval type="string" val="page.id"/>
+    <sval type="string" val="time"/>
+    <sval type="string" val="count"/>
+    <sval type="string" val="results"/>
+    <sval type="string" val="num"/>
+    <sval type="string" val="v"/>
+    <sval type="string" val="gui"/>
+    <sval type="string" val="key"/>
+    <sval type="string" val="data"/>
+  </sval>
+  <sval type="array" size="25">
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="9006"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="151"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="1078"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="1078"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="158"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="plugman.gui"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-536868348"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="4">
+      <sval type="int" val="128"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="157"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="plugman.gui"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+    </sval>
+    <sval type="array" size="7">
+      <sval type="int" val="104"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="-1"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="-1610606839"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="2"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="13">
+      <sval type="int" val="104"/>
+      <sval type="int" val="5"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="15"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="-1"/>
+      <sval type="int" val="13"/>
+      <sval type="int" val="-2"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="6"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="142"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="7"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="142"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="6">
+      <sval type="int" val="126"/>
+      <sval type="int" val="8"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="5"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="6"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="7"/>
+    </sval>
+    <sval type="array" size="5">
+      <sval type="int" val="135"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="3"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="8"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="142"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="112"/>
+      <sval type="int" val="11"/>
+    </sval>
+    <sval type="array" size="17">
+      <sval type="int" val="405"/>
+      <sval type="int" val="4"/>
+      <sval type="int" val="9005"/>
+      <sval type="int" val="131075"/>
+      <sval type="int" val="10"/>
+      <sval type="int" val="5"/>
+      <sval type="string" val="PURGE:%s"/>
+      <sval type="int" val="131074"/>
+      <sval type="int" val="1"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+    <sval type="array" size="3">
+      <sval type="int" val="103"/>
+      <sval type="int" val="0"/>
+      <sval type="int" val="0"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+  <sval type="array" size="6">
+    <sval type="array" size="2">
+      <sval type="int" val="2"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="6"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="10"/>
+      <sval type="int" val="2"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="23"/>
+      <sval type="int" val="4"/>
+    </sval>
+    <sval type="array" size="2">
+      <sval type="int" val="23"/>
+      <sval type="int" val="2"/>
+    </sval>
+  </sval>
+  <sval type="int" val="0"/>
+</sval>
+
+</codearray>
+</script>

@@ -1,0 +1,506 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>Grax.repair.a.ship.lasercheck</name>
+	<version>1</version>
+	<engineversion>44</engineversion>
+	<description>Checks for Repair Lasers</description>
+	<arguments>
+		<argument index="1" name="ship" type="Var/Ship" desc="ship" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="">
+			<var>$numbays</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>number</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>laser</text>
+			<text> </text>
+			<text>bays</text>
+		</line>
+		<line linenr="002" indent="">
+			<var>$weapons</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="003" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="004" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="005" indent="&#160;">
+			<var>$weap</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>laser</text>
+			<text> </text>
+			<text>type</text>
+			<text> </text>
+			<text>in</text>
+			<text> </text>
+			<text>turret</text>
+			<text> </text>
+			<var>0</var>
+			<text> </text>
+			<text>at</text>
+			<text> </text>
+			<text>slot</text>
+			<text> </text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="006" indent="&#160;">
+			<var>$numbays</var>
+			<text>[</text>
+			<var>$weapons</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$weap</var>
+		</line>
+		<line linenr="007" indent="&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>$weap</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>{Repair Laser}</var>
+		</line>
+		<line linenr="008" indent="&#160;&#160;">
+			<text>goto</text>
+			<text> </text>
+			<text>label</text>
+			<text> </text>
+			<var>good</var>
+			<text>:</text>
+		</line>
+		<line linenr="009" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="010" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="011" indent="">
+			<var>$numbays</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>number</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>turrets</text>
+		</line>
+		<line linenr="012" indent="">
+			<var>$weapons</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="013" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="014" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="015" indent="&#160;">
+			<var>$numtrweaps</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>max.</text>
+			<text> </text>
+			<text>number</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>lasers</text>
+			<text> </text>
+			<text>in</text>
+			<text> </text>
+			<text>turret</text>
+			<text> </text>
+			<var>$numbays</var>
+		</line>
+		<line linenr="016" indent="&#160;">
+			<var>$maxn</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>$numtrweaps</var>
+		</line>
+		<line linenr="017" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$numtrweaps</var>
+		</line>
+		<line linenr="018" indent="&#160;&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$numtrweaps</var>
+		</line>
+		<line linenr="019" indent="&#160;&#160;">
+			<var>$weap</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>laser</text>
+			<text> </text>
+			<text>type</text>
+			<text> </text>
+			<text>in</text>
+			<text> </text>
+			<text>turret</text>
+			<text> </text>
+			<var>$numbays</var>
+			<text> </text>
+			<text>at</text>
+			<text> </text>
+			<text>slot</text>
+			<text> </text>
+			<var>$numtrweaps</var>
+		</line>
+		<line linenr="020" indent="&#160;&#160;">
+			<var>$numbays</var>
+			<text>[</text>
+			<var>$numtrweaps</var>
+			<text>]</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$weap</var>
+		</line>
+		<line linenr="021" indent="&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>$weap</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>{Repair Laser}</var>
+		</line>
+		<line linenr="022" indent="&#160;&#160;&#160;">
+			<text>goto</text>
+			<text> </text>
+			<text>label</text>
+			<text> </text>
+			<var>good</var>
+			<text>:</text>
+		</line>
+		<line linenr="023" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="024" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="025" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="026" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>[CmdConCheck.Disabled]</var>
+		</line>
+		<line linenr="027" indent="">
+			<var>good</var>
+			<text>:</text>
+		</line>
+		<line linenr="028" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>[CmdConCheck.Available]</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="Grax.repair.a.ship.lasercheck" />
+			<sval type="int" val="44" />
+			<sval type="string" val="Checks for Repair Lasers" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="6">
+				<sval type="string" val="ship" />
+				<sval type="string" val="numbays" />
+				<sval type="string" val="weapons" />
+				<sval type="string" val="weap" />
+				<sval type="string" val="numtrweaps" />
+				<sval type="string" val="maxn" />
+			</sval>
+			<sval type="array" size="26">
+				<sval type="array" size="4">
+					<sval type="int" val="721" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610610423" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="555" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610610685" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="524324" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="100" />
+					<sval type="int" val="24" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="556" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610606839" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="554" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607095" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="555" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607357" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="9" />
+					<sval type="int" val="524324" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="100" />
+					<sval type="int" val="24" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="15" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="118" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="101" />
+					<sval type="string" val="good" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="117" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="21" />
+					<sval type="string" val="ship" />
+				</sval>
+			</sval>
+			<sval type="array" size="5">
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="21" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="23" />
+					<sval type="int" val="4" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

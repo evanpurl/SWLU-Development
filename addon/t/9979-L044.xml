@@ -327,6 +327,18 @@
 
 
 <!--  ############################################################################################################################################# -->
+<!--  REMEMBER HOMEBASE -->
+<!--  _____________________________________________________________________________________________ -->
+<!--  Ships will remember their homebase when the player takes command of the ship. -->
+<!--  Should REMEMBER HOMEBASE be enabled? 0 for off or 1 for on. Default: 1 -->
+      <t id="220">1</t>
+<!--  _____________________________________________________________________________________________ -->
+<!--  ############################################################################################################################################# -->
+
+
+
+
+<!--  ############################################################################################################################################# -->
 <!--  Mayhem 3 / Mayhem 3 Rebalanced / Star Wars Mayhem 3 -->
 <!--  _____________________________________________________________________________________________ -->
 <!--  Enables various changes in Mayhem 3 games. -->
@@ -573,6 +585,7 @@
       <t id="1003">12300</t> <!-- Lowest task number for tv.mayhem.task.claimable -->
       <t id="1004">12400</t> <!-- Lowest task number for Monitor Mothership -->
       <t id="1005">12500</t> <!-- Lowest task number for Captains -->
+      <t id="1006">12600</t> <!-- Lowest task number for Remember Homebase -->
 
 	<t id="13">100</t> <!-- Mayhem 2: Milliseconds between each scan step (default: 100) -->
 	<t id="10">10000</t> <!-- Mayhem 2: Ship research cost divider (default: 10000) -->

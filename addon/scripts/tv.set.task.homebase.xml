@@ -2,7 +2,7 @@
 <?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
 <!-- Generated using X-Studio -->
 <script>
-	<name>tv.set.task.autorotate</name>
+	<name>tv.set.task.homebase</name>
 	<version>1</version>
 	<engineversion>50</engineversion>
 	<description></description>
@@ -23,7 +23,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.feature.autorotate</call>
+			<call>tv.feature.homebase</call>
 			<text> </text>
 			<text>on</text>
 			<text> </text>
@@ -58,13 +58,13 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.feature.autorotate</call>
+			<call>tv.feature.homebase</call>
 			<text> </text>
 			<text>and</text>
 			<text> </text>
 			<text>priority</text>
 			<text> </text>
-			<var>153</var>
+			<var>156</var>
 			<text>:</text>
 			<text> </text>
 			<text>arg1</text>
@@ -97,7 +97,7 @@
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
-			<sval type="string" val="tv.set.task.autorotate" />
+			<sval type="string" val="tv.set.task.homebase" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
@@ -113,7 +113,7 @@
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
 					<sval type="int" val="2" />
-					<sval type="string" val="tv.feature.autorotate" />
+					<sval type="string" val="tv.feature.homebase" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 				</sval>
@@ -133,11 +133,11 @@
 					<sval type="int" val="1017" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="string" val="tv.feature.autorotate" />
+					<sval type="string" val="tv.feature.homebase" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 					<sval type="int" val="4" />
-					<sval type="int" val="153" />
+					<sval type="int" val="156" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
 					<sval type="int" val="0" />
